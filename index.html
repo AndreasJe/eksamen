@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udvælgelse</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <main id="content">
+        <h1 id="overskrift"></h1>
+        <p id="brødtekst"></p>
+
+    <!-- JAVA -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start)
+
+
+        // LAV EN VARIABLE TIL AT BEGYNDE MED
+        let udvælg
+
+        // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
+        //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
+        // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
+        let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/pages/576";
+
+        // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
+        async function start() {
+            let response1 = await fetch(url1);
+            udvælg = await response1.json();
+            visUdvælg();
+        }
+
+        // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
+        // HENT DATA VIA DEN TIDLIGERE VARIABEL
+
+
+
+        function visUdvælg() {
+            console.log("Page data loades")
+            document.querySelector("#brødtekst").innerhtml = udvælg.content.rendered;
+            document.querySelector("#splash").src = udvælg.better_featured_image.source_url;
+
+        }
+    </script>
+
+
+    <!-- HTML SLUT -->
+
+</body></html>
