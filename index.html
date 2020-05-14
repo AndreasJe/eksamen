@@ -7,23 +7,21 @@
     <title>Udvælgelse</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <style media="screen">
-
-a.sbi_photo {
-  height:100px;
-  width:100px;
+  #rudr_instafeed{
+  list-style:none
 }
-
-.sbi_type {
-
-    height:100px;
-    width:100px;
+#rudr_instafeed li{
+  float:left;
+  width:200px;
+  height:200px;
+  margin:10px
 }
-
-.sbi_item {
-
-    height:100px;
-    width:100px;
+#rudr_instafeed li img{
+  max-width:100%;
+  max-height:100%;
 }
 </style>
 
@@ -34,36 +32,33 @@ a.sbi_photo {
         <h1 id="overskrift"></h1>
         <p id="brødtekst"></p>
 
+        <ul id="rudr_instafeed"></ul>
+    </main>
+
     <!-- JAVA -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", start)
+    <script>var token = 'IGQVJYYkRTZA0tqcEptM25SazZA5b2NMVVhWVExJVmxjUGE2NXRVdmtuX01DTDMyelFVN3UyenZAhSHpTMFBmMDBCOG9lbkNrTGUzS20zU0FHTHlhTGdLRjFZAbkNKTTFWY1Bmc2dmc1d1NjZA3X1lLTWc3awZDZD', // learn how to obtain it below
+    userid = 17841401394070063, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
+    num_photos = 5; // how much photos do you want to get
 
-
-        // LAV EN VARIABLE TIL AT BEGYNDE MED
-        let udvælg
-
-        // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
-        //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
-        // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
-        let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/pages/689";
-
-        // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
-        async function start() {
-            let response1 = await fetch(url1);
-            udvælg = await response1.json();
-            visUdvælg();
-        }
-
-        // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
-        // HENT DATA VIA DEN TIDLIGERE VARIABEL
-
-
-
-        function visUdvælg() {
-            console.log("Page data loades")
-            document.querySelector("#brødtekst").innerHTML = udvælg.content.rendered;
-        }
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+ 		console.log(data);
+		for( x in data.data ){
+			$('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
+			// data.data[x].images.thumbnail.url - URL of image 150х150
+			// data.data[x].images.standard_resolution.url - URL of image 612х612
+			// data.data[x].link - Instagram post URL
+		}
+	},
+	error: function(data){
+		console.log(data); // send the error notifications to console
+	}
+});
     </script>
 
 
