@@ -23,18 +23,39 @@
     <a href="#">Kontakt</a>
     <a href="#">Shop</a>
     <div class="splash">
-      <img class="splash_vid">
+      <img class="splash_img">
     </div>
   </nav>
 
   <main id="content">
 
+    <h1 class="overskrift"></h1>
 
-    <div class="velkommen">
-      <img class="bg_img">
-      <h1 class="overskrift"></h1>
-          <p class="brødtekst"></p>
+    // Vi bruger et row-wrap og sætter den oven på galleri, så vi bevarer en ens ramme på galleriet.
+    <div class="galleri_nav">
+      <div class="filter-btn">
+        <p class="filter1">TRADITIONAL</p>
+      </div>
+      <div class="filter-btn">
+        <p class="filter2">BLACK & GREY REALISM</p>
+      </div>
+      <div class="filter-btn">
+        <p class="filter3">NEO TRADITIONAL</p>
+      </div>
+      <div class="filter-btn">
+        <p class="filter3">JAPANSK</p>
+      </div>
+    </div>
 
+    <div class="galleri">
+      <main id="liste"></main>
+
+      <template>
+        <article>
+          <img class="oplæg_img">
+        </article>
+      </template>
+    </div>
     </div>
 
 
@@ -43,11 +64,11 @@
       <img class="logo_img">
     </div>
 
-<footer>
-  <p class="adresse"></p>
-    <p class="telefon"></p>
+    <footer>
+      <p class="adresse"></p>
+      <p class="telefon"></p>
       <p class="email"></p>
-</footer>
+    </footer>
 
 
   </main>
