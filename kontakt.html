@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Adam Vecht</title>
+
+    <style media="screen">
+
+
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <img class="logo_img">
+        <a href="#">Bio</a>
+        <a href="#">Galleri</a>
+        <a href="#">Info</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Shop</a>
+        <div class="splash">
+            <img class="splash_img">
+        </div>
+    </nav>
+
+    <main id="content">
+        <h1 class="overskrift"></h1>
+
+
+        <div class="kontakt_formular">
+            <div id="backend-data">
+              //bruger klasser derfineret i plugin - kontakt_form, kontakt_send, kontakt_navn osv.
+            </div>
+        </div>
+
+        <div class="brand">
+            <p class="navn"></p>
+            <img class="logo_img">
+        </div>
+
+        <footer>
+            <p class="adresse"></p>
+            <p class="telefon"></p>
+            <p class="email"></p>
+        </footer>
+
+    </main>
+
+    <div class="fixed_some">
+      <div class="rowwrapper">
+      <img class="instagram">
+      <img class="facebook">
+    </div>
+    </div>
+
+    <!-- JAVA -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", start)
+
+
+        let kontakt
+        let genereltIndhold
+
+        let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/pages/768";
+        let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+
+        async function start() {
+            let response1 = await fetch(url1);
+            let response2 = await fetch(url2);
+
+            kontakt = await response1.json();
+            genereltIndhold = await response2.json();
+
+            visKontakt();
+            visPermanentIndhold();
+        }
+
+
+        function visKontakt() {
+            console.log("Henter kontakt formular...")
+            document.querySelector("#backend-data").innerHTML = kontakt.content.rendered;
+
+        }
+
+
+
+        function visGenereltIndhold() {
+            console.log("Henter generelt indhold...")
+            document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+            document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
+            document.querySelector(".adresse").textContent = genereltIndhold.adresse.guid;
+            document.querySelector(".email").textContent = genereltIndhold.email.guid;
+            document.querySelector(".telefon").textContent = genereltIndhold.tlf.guid;
+            document.querySelector(".navn").textContent = genereltIndhold.navn.guid;
+            document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
+            document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
+        }
+    </script>
+
+
+    <!-- HTML SLUT -->
+
+</body>
+
+</html>
