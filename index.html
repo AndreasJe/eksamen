@@ -2,66 +2,119 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Vecht</title>
-    <style media="screen">
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Vecht</title>
+
+  <style media="screen">
+    .splash_img {
+      max-width: 100vw;
+    }
+
+    .instagram {
+      width: 30px;
+      height: 30px;
+    }
+
+    .facebook {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
 
 </head>
 
 <body>
-    <nav>
-        <img class="logo_img">
-        <a href="#">Bio</a>
-        <a href="#">Galleri</a>
-        <a href="#">Info</a>
-        <a href="#">Kontakt</a>
-        <a href="#">Shop</a>
-        <div class="splash">
-            <img class="splash_vid">
-        </div>
-    </nav>
+  <nav>
+    <img class="logo_img">
+    <a href="#">Bio</a>
+    <a href="#">Galleri</a>
+    <a href="#">Info</a>
+    <a href="#">forside</a>
+    <a href="#">Shop</a>
+    <img class="splash_vid">
+  </nav>
 
-    <main id="content">
+  <main id="content">
 
 
-        <div class="velkommen">
-            <img class="bg_img">
-            <h1 class="overskrift"></h1>
-            <p class="brødtekst"></p>
+    <div class="velkommen">
+      <img class="bg_img">
+      <h1 class="overskrift"></h1>
+      <p class="brødtekst"></p>
 
-        </div>
-
-
-        <div class="brand">
-            <p class="navn"></p>
-            <img class="logo_img">
-        </div>
-
-        <footer>
-            <p class="adresse"></p>
-            <p class="telefon"></p>
-            <p class="email"></p>
-        </footer>
+    </div>
 
 
-            <div class="fixed_some">
-              <div class="rowwrapper">
-              <img class="instagram">
-              <img class="facebook">
-            </div>
-            </div>
-    </main>
+    <div class="brand">
+      <p class="navn"></p>
+      <img class="logo_img">
+    </div>
 
-    <!-- JAVA -->
-
-    <script>
-
-    </script>
+    <footer>
+      <p class="adresse"></p>
+      <p class="telefon"></p>
+      <p class="email"></p>
+    </footer>
 
 
-    <!-- HTML SLUT -->
+    <div class="fixed_some">
+      <div class="rowwrapper">
+        <img class="instagram">
+        <img class="facebook">
+      </div>
+    </div>
+  </main>
+
+  <!-- JAVA -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", start)
+
+
+    let forside
+    let genereltIndhold
+
+    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/forside/792";
+    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+
+    async function start() {
+      let response1 = await fetch(url1);
+      let response2 = await fetch(url2);
+
+      forside = await response1.json();
+      genereltIndhold = await response2.json();
+
+      visForside();
+      visGenereltIndhold();
+    }
+
+
+    function visForside() {
+      console.log("Henter forside indhold...")
+      document.querySelector(".bg_img").src = forside.baggrundsbillede.guid;
+      document.querySelector(".splash_vid").src = forside.video.guid;
+      document.querySelector(".overskrift").textContent = forside.overskrift;
+      document.querySelector(".brødtekst").textContent = forside.tekst;
+
+    }
+
+
+
+    function visGenereltIndhold() {
+      console.log("Henter generelt indhold...")
+      document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+      document.querySelector(".email").textContent = genereltIndhold.email;
+      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
+      document.querySelector(".navn").textContent = genereltIndhold.navn;
+      document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
+      document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
+    }
+  </script>
+
+
+  <!-- HTML SLUT -->
 
 </body>
 

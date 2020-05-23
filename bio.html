@@ -5,8 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio | Adam Vecht</title>
-    <style media="screen">
-    </style>
+
+        <style media="screen">
+
+    .splash_img {
+      max-width: 100vw;
+    }
+
+    .instagram {
+      width:30px;
+      height:30px;
+    }
+
+    .facebook {
+      width:30px;
+      height:30px;
+    }
+        </style>
 
 </head>
 
@@ -16,7 +31,7 @@
         <a href="#">Bio</a>
         <a href="#">Galleri</a>
         <a href="#">Info</a>
-        <a href="#">Kontakt</a>
+        <a href="#">biografi</a>
         <a href="#">Shop</a>
         <div class="splash">
             <img class="splash_img">
@@ -71,10 +86,54 @@
 
     <!-- JAVA -->
 
-    <script>
 
-    </script>
+        <script>
 
+            document.addEventListener("DOMContentLoaded", start)
+
+
+            let biografi
+            let genereltIndhold
+
+            let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/about/781";
+            let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+
+            async function start() {
+                let response1 = await fetch(url1);
+                let response2 = await fetch(url2);
+
+                biografi = await response1.json();
+                genereltIndhold = await response2.json();
+
+                visInformation();
+                visGenereltIndhold();
+            }
+
+
+            function visInformation() {
+                console.log("Henter biografi...")
+                document.querySelector(".underoverskrift").textContent = biografi.overskrift;
+                document.querySelector(".brødtekst").textContent = biografi.brdtekst;
+                document.querySelector(".insta_btn").textContent = biografi.flg_mig_tekst;
+                document.querySelector(".insta1").src = biografi.billede1.guid;
+                document.querySelector(".insta2").src = biografi.billede2.guid;
+                document.querySelector(".insta3").src = biografi.billede3.guid;
+            }
+
+
+
+            function visGenereltIndhold() {
+                console.log("Henter generelt indhold...")
+                document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+                document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
+                document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+                document.querySelector(".email").textContent = genereltIndhold.email;
+                document.querySelector(".telefon").textContent = genereltIndhold.tlf;
+                document.querySelector(".navn").textContent = genereltIndhold.navn;
+                document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
+                document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
+            }
+        </script>
 
     <!-- HTML SLUT -->
 
