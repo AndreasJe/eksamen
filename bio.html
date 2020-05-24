@@ -2,140 +2,138 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio | Adam Vecht</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio | Adam Vecht</title>
 
-        <style media="screen">
-
+  <style media="screen">
     .splash_img {
       max-width: 100vw;
     }
 
     .instagram {
-      width:30px;
-      height:30px;
+      width: 30px;
+      height: 30px;
     }
 
     .facebook {
-      width:30px;
-      height:30px;
+      width: 30px;
+      height: 30px;
     }
-        </style>
+  </style>
 
 </head>
 
 <body>
-    <nav>
-        <img class="logo_img">
-        <a href="#">Bio</a>
-        <a href="#">Galleri</a>
-        <a href="#">Info</a>
-        <a href="#">biografi</a>
-        <a href="#">Shop</a>
-        <div class="splash">
-            <img class="splash_img">
-        </div>
-    </nav>
+  <nav>
+    <img class="logo_img">
+    <a href="#">Bio</a>
+    <a href="#">Galleri</a>
+    <a href="#">Info</a>
+    <a href="#">biografi</a>
+    <a href="#">Shop</a>
+    <div class="splash">
+      <img class="splash_img">
+    </div>
+  </nav>
 
-    <main id="content">
-        <h1 class="overskrift"></h1>
+  <main id="content">
+    <h1 class="overskrift"></h1>
 
-        <div class="bio rowwrapper">
-            <img class="bio_img">
-            <div class="bio_txt">
-                <h3 class="underoverskrift"></h3>
-                <p class="brødtekst"></p>
-            </div>
-        </div>
+    <div class="bio rowwrapper">
+      <img class="bio_img">
+      <div class="bio_txt">
+        <h3 class="underoverskrift"></h3>
+        <p class="brødtekst"></p>
+      </div>
+    </div>
 
-        <div class="instagram">
+    <div class="instagram">
 
-            <h1 class="overskrift"></h1>
+      <h1 class="overskrift"></h1>
 
-            <div class="insta_feed">
-                <img class="insta1">
-                <img class="insta2">
-                <img class="insta3">
-            </div>
+      <div class="insta_feed">
+        <img class="insta1">
+        <img class="insta2">
+        <img class="insta3">
+      </div>
 
-            <div class="btn">
-                <p class="insta_btn"></p>
-            </div>
-        </div>
+      <div class="btn">
+        <p class="insta_btn"></p>
+      </div>
+    </div>
 
-        <div class="brand">
-            <p class="navn"></p>
-            <img class="logo_img">
-        </div>
+    <div class="brand">
+      <p class="navn"></p>
+      <img class="logo_img">
+    </div>
 
-        <footer>
-            <p class="adresse"></p>
-            <p class="telefon"></p>
-            <p class="email"></p>
-        </footer>
-
-
-            <div class="fixed_some">
-              <div class="rowwrapper">
-              <img class="instagram">
-              <img class="facebook">
-            </div>
-            </div>
-    </main>
-
-    <!-- JAVA -->
+    <footer>
+      <p class="adresse"></p>
+      <p class="telefon"></p>
+      <p class="email"></p>
+    </footer>
 
 
-        <script>
+    <div class="fixed_some">
+      <div class="rowwrapper">
+        <img class="instagram">
+        <img class="facebook">
+      </div>
+    </div>
+  </main>
 
-            document.addEventListener("DOMContentLoaded", start)
-
-
-            let biografi
-            let genereltIndhold
-
-            let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/about/781";
-            let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
-
-            async function start() {
-                let response1 = await fetch(url1);
-                let response2 = await fetch(url2);
-
-                biografi = await response1.json();
-                genereltIndhold = await response2.json();
-
-                visInformation();
-                visGenereltIndhold();
-            }
+  <!-- JAVA -->
 
 
-            function visInformation() {
-                console.log("Henter biografi...")
-                document.querySelector(".underoverskrift").textContent = biografi.overskrift;
-                document.querySelector(".brødtekst").textContent = biografi.brdtekst;
-                document.querySelector(".insta_btn").textContent = biografi.flg_mig_tekst;
-                document.querySelector(".insta1").src = biografi.billede1.guid;
-                document.querySelector(".insta2").src = biografi.billede2.guid;
-                document.querySelector(".insta3").src = biografi.billede3.guid;
-            }
+  <script>
+    document.addEventListener("DOMContentLoaded", start)
+
+
+    let biografi
+    let genereltIndhold
+
+    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/about/781";
+    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+
+    async function start() {
+      let response1 = await fetch(url1);
+      let response2 = await fetch(url2);
+
+      biografi = await response1.json();
+      genereltIndhold = await response2.json();
+
+      visInformation();
+      visGenereltIndhold();
+    }
+
+
+    function visInformation() {
+      console.log("Henter biografi...")
+      document.querySelector(".underoverskrift").textContent = biografi.overskrift;
+      document.querySelector(".brødtekst").textContent = biografi.brdtekst;
+      document.querySelector(".insta_btn").textContent = biografi.flg_mig_tekst;
+      document.querySelector(".insta1").src = biografi.billede1.guid;
+      document.querySelector(".insta2").src = biografi.billede2.guid;
+      document.querySelector(".insta3").src = biografi.billede3.guid;
+    }
 
 
 
-            function visGenereltIndhold() {
-                console.log("Henter generelt indhold...")
-                document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
-                document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
-                document.querySelector(".adresse").textContent = genereltIndhold.adresse;
-                document.querySelector(".email").textContent = genereltIndhold.email;
-                document.querySelector(".telefon").textContent = genereltIndhold.tlf;
-                document.querySelector(".navn").textContent = genereltIndhold.navn;
-                document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
-                document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
-            }
-        </script>
+    function visGenereltIndhold() {
+      console.log("Henter generelt indhold...")
+      document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
+      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+      document.querySelector(".email").textContent = genereltIndhold.email;
+      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
+      document.querySelector(".navn").textContent = genereltIndhold.navn;
+      document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
+      document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
+    }
+  </script>
 
-    <!-- HTML SLUT -->
+  <!-- HTML SLUT -->
 
 </body>
 
