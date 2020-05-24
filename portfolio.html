@@ -5,22 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Adam Vecht</title>
-
-  <style media="screen">
-    .splash_img {
-      max-width: 100vw;
-    }
-
-    .instagram {
-      width: 30px;
-      height: 30px;
-    }
-
-    .facebook {
-      width: 30px;
-      height: 30px;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
@@ -62,9 +47,10 @@
 
       <template>
         <article>
-          <img class="oplæg_img" alt="">
+          <img class="oplæg_img">
         </article>
       </template>
+
     </div>
 
 
@@ -91,7 +77,68 @@
   <!-- JAVA -->
 
   <script>
+    document.addEventListener("DOMContentLoaded", start)
 
+
+    let billeder
+    let genereltIndhold
+
+    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/posts";
+
+
+
+    async function start() {
+      let response1 = await fetch(url1);
+      let response2 = await fetch(url2);
+
+      billeder = await response2.json();
+      genereltIndhold = await response1.json();
+
+
+      visPortfolio();
+      visGenereltIndhold();
+
+
+    }
+
+
+    function visPortfolio() {
+      console.log("Loopview af tatoveringer hentes")
+
+      let liste = document.querySelector("#liste");
+      let template = document.querySelector("template");
+
+      billeder.forEach(billede => {
+        let clone = template.cloneNode(true).content;
+
+        clone.querySelector(".oplæg_img").src = billede.billede;
+
+
+        console.log(location.href, billede.id)
+
+        clone.querySelector("article").addEventListener("click", () => {
+
+          location.href = `portfolio.html?id=${billede.id}`;
+
+        })
+
+        liste.appendChild(clone);
+      });
+    }
+
+
+    function visGenereltIndhold() {
+      console.log("Henter generelt indhold...")
+      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
+      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+      document.querySelector(".email").textContent = genereltIndhold.email;
+      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
+      document.querySelector(".navn").textContent = genereltIndhold.navn;
+      document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
+      document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
+      document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+    }
   </script>
 
 
