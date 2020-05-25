@@ -1,404 +1,528 @@
 html {
-color:#C8C8C8;
-  margin: 0;
-  padding:0;
-  background-color: #191818;
+  color: #C8C8C8;
+  background-color: #212121;
   overflow-x: hidden;
 }
 
+body{
+  margin:0;
+  padding:0;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #191818;
+    -moz-box-shadow:inset 0px 0px 0px 10px #191818;
+    box-shadow:inset 0px 0px 0px 10px #191818;
+    background-color: #212121;
+    overflow-x: hidden;
+}
+
 .colwrapper {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
 .rowwrapper {
-  display:flex;
+  display: flex;
   flex-direction: row;
+  margin: auto;
 }
 
 .breaker {
   height: 15vh;
 }
-
+.smallBreaker {
+  height: 5vh;
+}
 
 /* //NAV klasser */
-
 nav {
-position: relative;
+  position: relative;
 }
 
 .navigation {
-  position:absolute;
+  position: absolute;
   top: 70vh;
-  left:2vh;
+  left: 2vh;
   text-align: center;
   font-size: 2rem
 }
 
 .logo_img {
   position: absolute;
-  width:60px;
-  left:2vh;
-  top:2vh;
+  width: 60px;
+  left: 2vh;
+  top: 2vh;
 }
 
 .btm_logo_img {
-  width:60px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+  width: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
-a {
-  text-decoration: none;
-  color:#C8C8C8;
-}
+
 
 .fullscreen-bg {
-    width:100vw;
-    height:100vh;
-    object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-
 /* //Billede klasser */
+.splash_img {
+  width: 100vw;
+  height: 60vw;
+  object-fit: cover;
+}
 
-    .splash_img {
-      width:100vw;
-      height:60vw;
-      object-fit: cover;
-    }
+.instagram {
+  width: 30px;
+  height: 30px;
+}
 
-    .instagram {
-      width: 30px;
-      height: 30px;
-    }
+.facebook {
+  width: 30px;
+  height: 30px;
+}
 
-    .facebook {
-      width: 30px;
-      height: 30px;
-    }
-
+.aft_img1 {
+  position: absolute;
+  height:150px;
+  width:150px;
+  right:0;
+  top: 30%;
+  z-index: 4;
+}
+.aft_img2 {
+  position: absolute;
+  height:150px;
+  width:150px;
+  left:0;
+  top: 60%;
+  z-index: 0;
+}
+.aft_img3 {
+  position: absolute;
+  height:150px;
+  width:150px;
+  right:0;
+  top: 80%;
+  z-index: 0;
+}
 
 /* //Main content */
-
 #content {
-  width:100vw;
-  height:130%;
+  width: 100vw;
+  height: 130%;
   background-color: #212121;
 }
 
 #backend-data {
-  width:50%;
-  margin:auto;
 }
 
 .fixed_some {
   position: fixed;
-  left:0;
+  left: 0;
   bottom: 10;
-  width:200px;
-  height:100px;
+  width: 200px;
+  height: 100px;
 }
 
-
 /* //Sektioner */
-
 .velkommen {
-  height:50vh;
-    padding: 10vw;
-
+  height: 100%;
+  padding: 10vw;
 }
 
 .brand {
-  height:50vh;
-    padding: 10vw;
+  height: 25vh;
+  padding: 10vw;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #191818;
+    -moz-box-shadow:inset 0px 0px 0px 10px #191818;
+    box-shadow:inset 0px 0px 0px 10px #191818;
 }
 
-.velkommen  {
-  height:100%;
-    padding: 10vw;
+.betaling {
+  height: 100%;
+  padding: 10vw;
+
 }
 
-.galleri  {
-  height:100%;
-    padding: 10vw;
+.råd {
+  height: 100%;
+  padding: 10vw;
+
 }
 
+.information {
+  height: 100%;
+  padding: 10vw;
 
+}
+
+.galleri {
+  height: 100%;
+  padding: 10vw;
+}
+
+.kontakt_formular {
+  height: 100%;
+  padding: 10vw;
+}
 
 footer {
+background-color: #191818;
   text-align: center;
   height: 20vh;
-    padding: 10vw;
+  padding: 10vw;}
+
+.aftercare {
+  height: auto;
+  padding: 10vw;
+    position: relative;
 }
 
+
+
+  /* //Sektioner fra Aftercare  */
+
+.section1 {
+  margin-top: 10vh;
+  z-index: 99;
+}
+.section2 {
+  margin-top: 10vh;
+  z-index: 99;
+
+}
+.section3 {
+  margin-top: 10vh;
+  z-index: 99;
+
+}
 
 
 
 /* //Loopview  */
-
 #liste {
-    max-width: 80vw;
-    display: grid;
+  max-width: 80vw;
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 80vw;
   grid-gap: 10px;
-  margin:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
 article {
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+  width:100%;
 }
 
 .oplæg_img {
-  height:40vh;
-  width:100%;
-  margin:auto;
+box-shadow: 0px 0px 0px 10px #191818;
+  height: 50vh;
+  width: 100%;
+  margin-top: 5vh;
+  margin-bottom:5vh;
   object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.valgt {
+  background-color: #585858;
+}
+
+.adresse {
+  width:250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 
 /* //Knapper til filtrering  */
-
-.galleri_nav  {
-  height:100%;
-      padding: 10vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: 250px;
+.galleri_nav {
+  height: 100%;
+  padding: 10vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 250px;
 }
 
-.filter-btn {
+
+.filter {
+  opacity: 50%;
+  text-align: center;
   word-break: normal;
-  padding:10px;
-  width:150px;
+  padding: 10px;
+  width: 150px;
+  Height:50px;
+    background: gray;
+    box-shadow: 0px 0px 0px transparent;
+    border: 2px solid black;
+    text-shadow: 0px 0px 0px transparent;
 }
 
 
 
 
 /* //Kontakt formular  */
+.kontakt_navn {
+  width: 250px;
+    background-color: #585858;
+      margin-top: 2vh;
+}
 
-.kontakt_navn .kontakt_email .kontakt_tlf {
-  width: 100px;
-  margin:50px;
+
+.kontakt_email{
+  width: 250px;
+    background-color: #585858;
+      margin-top: 2vh;
+}
+
+.kontakt_tlf {
+  width: 250px;
+    background-color: #585858;
+      margin-top: 2vh;
 }
 
 .kontakt_form {
-  width:200px;
-  margin: auto;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: 2vh;
+}
+.wpforms-field-medium {
+  width: 250px;
+  height: 40px;
+  background-color: #373737;
+  border:none;    color: #C8C8C8;
 }
 
 .wpforms-field-large {
-  width:200px;
-  background-color: #585858;
+  width: 250px;
+  height: 100px;
+  background-color: #373737;
+  border:none;
+      color: #C8C8C8;
 }
-
-
 
 .wpforms-submit-container {
-text-align: center;
-}
-
-.wpforms-field-label {
-font-size: 1rem;
-}
-
-.wpforms-field-hp {
-display:none;
-}
-
-
-/* //Tekst klasser */
-
-.navn  {
   text-align: center;
 }
 
+.wpforms-field-label {
+  font-size: 1rem;
+}
 
+.wpforms-field-hp {
+  display: none;
+}
+
+.kontakt_besked {
+  margin-top: 2vh;
+  background-color: #585858;
+}
+
+.kontakt_send {
+  border: none;
+  background-color: #585858;
+}
+
+/* //Tekst klasser */
+h1 {
+  width:250px;
+  font-size:2rem;
+    margin-left:auto;
+    margin-right:auto;
+  text-align: center;
+}
+
+.brødtekst {margin:30px;
+}
+
+.navn {
+  text-align: center;
+}
 
 .video-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
- video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-
-/* //Burger menu klasser */
-
-
-body
-{
-  margin: 0;
-  padding: 0;
-
-  /* make it look decent enough */
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-
-  overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-a
-{
+h2 {
+  width:300px;
+  font-size:1.2rem;
+    margin-left:auto;
+    margin-right:auto;
+  text-align: center;
+
+}
+
+h3 {
+  width:250px;
+  font-size:1.2rem;
+    margin-left:auto;
+    margin-right:auto;
+  text-align: center;
+
+}
+
+/* //FAQ klasser fra https://www.w3schools.com/howto/howto_js_accordion.asp*/
+
+
+.accordion {
+  height: 100px;
+  margin-top: 1vh;
+  background-color: #585858;
+  color: #C8C8C8;
+  cursor: pointer;
+    padding: 0 18px;
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #474747;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-top: -10px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+  padding: 0 18px;
+  margin-bottom: 20px;
+  background-color: #373737;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* //Burger menu klasser fra https://codepen.io/mick-mick-gonzaga/pen/yGmemL*/
+
+
+a {
   text-decoration: none;
-  color: #232323;
-
+  color: black;
   transition: color 0.3s ease;
 }
 
-a:hover
-{
+a:hover {
   color: tomato;
 }
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: absolute;
   top: 50px;
   right: 20px;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-
   cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-
   background: #cdcdcd;
   border-radius: 3px;
-
   z-index: 1;
-
   transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+
+#menuToggle input:checked~span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
+
+#menu {
   position: absolute;
   width: 100vw;
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
   right: -100px;
-
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
 
-/*
- * And let's fade it in from the left
- */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked~ul {
   transform: scale(1.0, 1.0);
   opacity: 1;
 }

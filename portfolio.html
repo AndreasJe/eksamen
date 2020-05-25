@@ -34,7 +34,7 @@
 
 <body>
 
-  <nav role="navigation_mobile">
+  <nav class="navigation_mobile">
     <div id="menuToggle">
       <input type="checkbox" />
 
@@ -80,25 +80,22 @@
   </div>
   <main id="content">
 
-    <h1 class="overskrift"></h1>
     <div class="galleri_nav">
-      <div class="rowwrapper">
 
-        <div class="filter-btn">
-          <p class="filter">TRADITIONAL</p>
-        </div>
-        <div class="filter-btn">
-          <p class="filter">JAPANSK</p>
-        </div>
-      </div>
+      <h1 class="overskrift">Portfolio</h1>
       <div class="rowwrapper">
-        <div class="filter-btn">
-          <p class="filter">NEO TRADITIONAL</p>
-        </div>
-        <div class="filter-btn">
-          <p class="filter">BLACK & GREY REALISM</p>
-        </div>
-      </div>
+        <button class="filter" data-kategorier="traditional">TRADITIONAL</button>
+        <button class="filter" data-kategorier="japanese">JAPANSK</button></div>
+      <div class="rowwrapper">
+        <button class="filter" data-kategorier="black and grey realism">BLACK & GREY REALISM</button>
+        <button class="filter" data-kategorier="andet">ANDET</button></div>
+
+
+
+
+      <h1 class="overskrift2"></h1>
+
+
     </div>
     <div class="galleri">
       <main id="liste"></main>
@@ -114,7 +111,7 @@
 
     <div class="brand">
       <h3 class="navn"></h3>
-      <img class="logo_img">
+      <img class="btm_logo_img">
     </div>
 
     <footer>
@@ -135,54 +132,68 @@
   <!-- JAVA -->
 
   <script>
-    document.addEventListener("DOMContentLoaded", start)
+    let billeder = []
+    const liste = document.querySelector("#liste");
+    const template = document.querySelector("template");
+    let filteret = "alle";
+    document.addEventListener("DOMContentLoaded", start);
 
+    function start() {
+      getJson();
+      addEventListenersToButtons();
+    }
 
-    let billeder
-    let genereltIndhold
+    async function getJson() {
 
-    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/tattoo";
-    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
-
-
-
-    async function start() {
+      const url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/tattoo";
+      const url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
       let response1 = await fetch(url1);
       let response2 = await fetch(url2);
-
       billeder = await response1.json();
       genereltIndhold = await response2.json();
-
-
       visPortfolio();
       visGenereltIndhold();
-
 
     }
 
 
     function visPortfolio() {
-      console.log("Loopview af tatoveringer hentes")
 
-      let liste = document.querySelector("#liste");
-      let template = document.querySelector("template");
-
+      console.log(billeder)
+      liste.innerHTML = "";
       billeder.forEach(billede => {
-        let clone = template.cloneNode(true).content;
+        if (filteret == "alle" || filteret == billede.kategorier) {
+          const clone = template.cloneNode(true).content;
 
-        clone.querySelector(".oplæg_img").src = billede.billede.guid;
+          clone.querySelector(".oplæg_img").src = billede.billede.guid;
 
 
-        console.log(location.href, billede.id)
 
-        clone.querySelector("article").addEventListener("click", () => {
+          clone.querySelector("article").addEventListener("click", () => {
 
-          location.href = `portfolio.html?id=${billede.id}`;
+            location.href = `portfolio.html?id=${billede.id}`;
 
-        })
-
-        liste.appendChild(clone);
+          })
+          liste.appendChild(clone);
+        }
       });
+    }
+
+    function addEventListenersToButtons() {
+      document.querySelectorAll("button").forEach(elm => {
+        elm.addEventListener("click", filtrering);
+      })
+    }
+
+    function filtrering() {
+      filter = this.kategorier;
+      console.log("Du har valgt filteret:" + this.textContent);
+      document.querySelector(".overskrift2").textContent = this.textContent;
+      document.querySelectorAll(".filter").forEach(elm => {
+        elm.classList.remove("valgt");
+      });
+      this.classList.add("valgt");
+      visPortfolio();
     }
 
 
@@ -196,6 +207,7 @@
       document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
+      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
     }
   </script>
 

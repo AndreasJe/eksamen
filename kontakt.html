@@ -67,9 +67,9 @@
   </nav>
 
   <main id="content">
-    <div class="breaker">
-    </div>
     <h1 class="overskrift"></h1>
+    <div class="smallBreaker">
+    </div>
 
 
     <div class="kontakt_formular">
@@ -77,10 +77,12 @@
         //bruger klasser derfineret i plugin - kontakt_form, kontakt_send, kontakt_navn osv.
       </div>
     </div>
+    <div class="smallBreaker">
+    </div>
 
     <div class="brand">
       <h3 class="navn"></h3>
-      <img class="logo_img" src="" alt="">
+      <img class="btm_logo_img" src="" alt="">
     </div>
 
     <footer>
@@ -133,6 +135,7 @@
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
       document.querySelector(".adresse").innerHTML = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
@@ -142,7 +145,6 @@
       document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
     }
   </script>
-
 
   <!-- HTML SLUT -->
 
