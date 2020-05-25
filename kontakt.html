@@ -6,16 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt | Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style media="screen">
+    .navigation {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
   <nav>
     <img class="logo_img" src="" alt="">
-    <a href="#">Bio</a>
-    <a href="#">Galleri</a>
-    <a href="#">Info</a>
-    <a href="#">Kontakt</a>
-    <a href="#">Shop</a>
+    <div class="colwrapper navigation">
+      <a href="bio.html">Bio</a>
+      <a href="portfolio.html">Galleri</a>
+      <a href="information.html">Info</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="shop.html">Shop</a>
+    </div>
     <div class="splash">
       <img class="splash_img" src="" alt="">
     </div>
@@ -32,7 +40,7 @@
     </div>
 
     <div class="brand">
-      <p class="navn"></p>
+      <h3 class="navn"></h3>
       <img class="logo_img" src="" alt="">
     </div>
 
@@ -87,7 +95,7 @@
       console.log("Henter generelt indhold...")
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
-      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+      document.querySelector(".adresse").innerHTML = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
       document.querySelector(".telefon").textContent = genereltIndhold.tlf;
       document.querySelector(".navn").textContent = genereltIndhold.navn;

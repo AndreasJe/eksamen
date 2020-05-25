@@ -1,6 +1,67 @@
+html body {
+color:#C8C8C8;
+  margin: 0;
+  padding:0;
+  background-color: #212121;
+  overflow-x: hidden;
+}
+
+.colwrapper {
+  display:flex;
+  flex-direction: column;
+}
+
+.rowwrapper {
+  display:flex;
+  flex-direction: row;
+}
+
+
+/* //NAV klasser */
+
+nav {
+position: relative;
+}
+
+.navigation {
+  position:absolute;
+  top: 70vh;
+  left:2vh;
+  text-align: center;
+  font-size: 2rem
+}
+
+.logo_img {
+  position: absolute;
+  width:60px;
+  left:2vh;
+}
+
+.btm_logo_img {
+  width:60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+a {
+  text-decoration: none;
+  color:#C8C8C8;
+}
+
+.fullscreen-bg {
+    width:100vw;
+    height:100vh;
+    object-fit: cover;
+}
+
+
+/* //Billede klasser */
 
     .splash_img {
-      max-width: 100vw;
+      width:100vw;
+      height:60vw;
+      object-fit: cover;
     }
 
     .instagram {
@@ -12,3 +73,87 @@
       width: 30px;
       height: 30px;
     }
+
+
+/* //Main content */
+
+#content {
+  width:100vw;
+  height:130%;
+  background-color: #212121;
+}
+
+#backend-data {
+  width:50%;
+  margin:auto;
+}
+
+.fixed_some {
+  position: fixed;
+  left:0;
+  bottom: 10;
+  width:200px;
+  height:100px;
+}
+
+
+/* //Sektioner */
+
+.velkommen {
+  height:50vh;
+    padding: 10vw;
+
+}
+
+.brand {
+  height:50vh;
+    padding: 10vw;
+}
+
+
+footer {
+  text-align: center;
+  height: 20vh;
+    padding: 10vw;
+}
+
+
+
+
+/* //Kontakt formular  */
+
+.kontakt_navn .kontakt_email .kontakt_tlf {
+  width: 100px;
+  margin:50px;
+}
+
+.kontakt_form {
+  width:200px;
+  margin: auto;
+}
+
+.wpforms-field-large {
+  width:200px;
+  background-color: #585858;
+}
+
+
+
+.wpforms-submit-container {
+text-align: center;
+}
+
+.wpforms-field-label {
+font-size: 1rem;
+}
+
+.wpforms-field-hp {
+display:none;
+}
+
+
+/* //Tekst klasser */
+
+.navn  {
+  text-align: center;
+}

@@ -12,12 +12,18 @@
 <body>
   <nav>
     <img class="logo_img">
-    <a href="#">Bio</a>
-    <a href="#">Galleri</a>
-    <a href="#">Info</a>
-    <a href="#">forside</a>
-    <a href="#">Shop</a>
-    <img class="splash_vid">
+    <div class="fullscreen-bg">
+      <video loop muted autoplay class="fullscreen-bg__video">
+        <source class="bg_video" type="video/mp4">
+      </video>
+    </div>
+    <div class="colwrapper navigation">
+      <a href="bio.html">Bio</a>
+      <a href="portfolio.html">Galleri</a>
+      <a href="information.html">Info</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="shop.html">Shop</a>
+    </div>
   </nav>
 
   <main id="content">
@@ -32,8 +38,8 @@
 
 
     <div class="brand">
-      <p class="navn"></p>
-      <img class="logo_img">
+      <h3 class="navn center"></h3>
+      <img class="btm_logo_img">
     </div>
 
     <footer>
@@ -78,7 +84,7 @@
     function visForside() {
       console.log("Henter forside indhold...")
       document.querySelector(".bg_img").src = forside.baggrundsbillede.guid;
-      document.querySelector(".splash_vid").src = forside.video.guid;
+      document.querySelector(".bg_video").src = forside.video.guid;
       document.querySelector(".overskrift").textContent = forside.overskrift;
       document.querySelector(".brødtekst").textContent = forside.tekst;
 
@@ -89,6 +95,7 @@
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".adresse").textContent = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
       document.querySelector(".telefon").textContent = genereltIndhold.tlf;
