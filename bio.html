@@ -101,7 +101,7 @@
 
     <div class="brand">
       <h3 class="navn"></h3>
-      <img class="logo_img">
+      <img class="btm_logo_img">
     </div>
 
     <footer>
@@ -161,6 +161,7 @@
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
       document.querySelector(".adresse").textContent = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
