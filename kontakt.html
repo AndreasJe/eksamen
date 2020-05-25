@@ -8,15 +8,54 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <style media="screen">
+    /* Desktop: display none */
+
+
+    /* Mobil: display none */
+    .video-container {
+      display: none;
+    }
+
     .navigation {
       display: none;
     }
   </style>
+
 </head>
 
 <body>
+
+  <nav role="navigation_mobile">
+    <div id="menuToggle">
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu">
+        <a href="bio.html">
+          <li>Bio</li>
+        </a>
+        <a href="portfolio.html">
+          <li>Galleri</li>
+        </a>
+        <a href="information.html">
+          <li>Info</li>
+        </a>
+        <a href="kontakt.html">
+          <li>Kontakt</li>
+        </a>
+        <a href="shop.html">
+          <li>Shop</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
   <nav>
-    <img class="logo_img" src="" alt="">
+    <a href="index.html">
+      <img class="logo_img"></a>
     <div class="colwrapper navigation">
       <a href="bio.html">Bio</a>
       <a href="portfolio.html">Galleri</a>
@@ -24,12 +63,12 @@
       <a href="kontakt.html">Kontakt</a>
       <a href="shop.html">Shop</a>
     </div>
-    <div class="splash">
-      <img class="splash_img" src="" alt="">
-    </div>
+    <img class="splash_img">
   </nav>
 
   <main id="content">
+    <div class="breaker">
+    </div>
     <h1 class="overskrift"></h1>
 
 

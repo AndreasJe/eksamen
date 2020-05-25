@@ -8,7 +8,24 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <style media="screen">
+    /* Desktop: display none */
+
+    /*.breaker {
+  mindre eller displaynone
+    }
+
+    */
+
+    /* Mobil: display none */
+    .video-container {
+      display: none;
+    }
+
     .navigation {
+      display: none;
+    }
+
+    .splash_img {
       display: none;
     }
   </style>
@@ -16,8 +33,39 @@
 </head>
 
 <body>
+
+  <nav role="navigation_mobile">
+    <div id="menuToggle">
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu">
+        <a href="bio.html">
+          <li>Bio</li>
+        </a>
+        <a href="portfolio.html">
+          <li>Galleri</li>
+        </a>
+        <a href="information.html">
+          <li>Info</li>
+        </a>
+        <a href="kontakt.html">
+          <li>Kontakt</li>
+        </a>
+        <a href="shop.html">
+          <li>Shop</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
   <nav>
-    <a href="index.html"><img class="logo_img"></a>
+    <a href="index.html">
+      <img class="logo_img"></a>
+    </div>
     <div class="colwrapper navigation">
       <a href="bio.html">Bio</a>
       <a href="portfolio.html">Galleri</a>
@@ -25,31 +73,33 @@
       <a href="kontakt.html">Kontakt</a>
       <a href="shop.html">Shop</a>
     </div>
-    <div class="splash">
-      <img class="splash_img">
-    </div>
+    <img class="splash_img">
   </nav>
 
+  <div class="breaker">
+  </div>
   <main id="content">
 
     <h1 class="overskrift"></h1>
-
-    // Vi bruger et row-wrap og sætter den oven på galleri, så vi bevarer en ens ramme på galleriet.
     <div class="galleri_nav">
-      <div class="filter-btn">
-        <p class="filter1">TRADITIONAL</p>
+      <div class="rowwrapper">
+
+        <div class="filter-btn">
+          <p class="filter">TRADITIONAL</p>
+        </div>
+        <div class="filter-btn">
+          <p class="filter">JAPANSK</p>
+        </div>
       </div>
-      <div class="filter-btn">
-        <p class="filter2">BLACK & GREY REALISM</p>
-      </div>
-      <div class="filter-btn">
-        <p class="filter3">NEO TRADITIONAL</p>
-      </div>
-      <div class="filter-btn">
-        <p class="filter3">JAPANSK</p>
+      <div class="rowwrapper">
+        <div class="filter-btn">
+          <p class="filter">NEO TRADITIONAL</p>
+        </div>
+        <div class="filter-btn">
+          <p class="filter">BLACK & GREY REALISM</p>
+        </div>
       </div>
     </div>
-
     <div class="galleri">
       <main id="liste"></main>
 
@@ -91,8 +141,8 @@
     let billeder
     let genereltIndhold
 
-    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
-    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/posts";
+    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/tattoo";
+    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
 
 
 
@@ -100,8 +150,8 @@
       let response1 = await fetch(url1);
       let response2 = await fetch(url2);
 
-      billeder = await response2.json();
-      genereltIndhold = await response1.json();
+      billeder = await response1.json();
+      genereltIndhold = await response2.json();
 
 
       visPortfolio();
@@ -120,7 +170,7 @@
       billeder.forEach(billede => {
         let clone = template.cloneNode(true).content;
 
-        clone.querySelector(".oplæg_img").src = billede.billede;
+        clone.querySelector(".oplæg_img").src = billede.billede.guid;
 
 
         console.log(location.href, billede.id)
@@ -138,7 +188,6 @@
 
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
-      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
       document.querySelector(".adresse").textContent = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
       document.querySelector(".telefon").textContent = genereltIndhold.tlf;
@@ -146,6 +195,7 @@
       document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
     }
   </script>
 
