@@ -4,14 +4,14 @@ html {
   overflow-x: hidden;
 }
 
-body{
-  margin:0;
-  padding:0;
-    -webkit-box-shadow:inset 0px 0px 0px 10px #191818;
-    -moz-box-shadow:inset 0px 0px 0px 10px #191818;
-    box-shadow:inset 0px 0px 0px 10px #191818;
-    background-color: #212121;
-    overflow-x: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: inset 0px 0px 0px 10px #191818;
+  -moz-box-shadow: inset 0px 0px 0px 10px #191818;
+  box-shadow: inset 0px 0px 0px 10px #191818;
+  background-color: #212121;
+  overflow-x: hidden;
 }
 
 .colwrapper {
@@ -28,6 +28,7 @@ body{
 .breaker {
   height: 15vh;
 }
+
 .smallBreaker {
   height: 5vh;
 }
@@ -59,8 +60,6 @@ nav {
   margin-right: auto
 }
 
-
-
 .fullscreen-bg {
   width: 100vw;
   height: 100vh;
@@ -74,37 +73,64 @@ nav {
   object-fit: cover;
 }
 
-.instagram {
-  width: 30px;
-  height: 30px;
+.bio_img {
+  width: 100vw;
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  border-color: #191818;
+  height: auto;
 }
 
-.facebook {
-  width: 30px;
-  height: 30px;
+.insta {
+  width: 25%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 5px black solid;
+  line-height: 50px;
+}
+
+.insta_feed {
+  width: 100%;
+}
+
+.instagram_ikon {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+
+.facebook_ikon {
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  margin-left: 10px;
+  object-fit: cover;
 }
 
 .aft_img1 {
   position: absolute;
-  height:150px;
-  width:150px;
-  right:0;
+  height: 150px;
+  width: 150px;
+  right: 0;
   top: 30%;
   z-index: 4;
 }
+
 .aft_img2 {
   position: absolute;
-  height:150px;
-  width:150px;
-  left:0;
+  height: 150px;
+  width: 150px;
+  left: 0;
   top: 60%;
   z-index: 0;
 }
+
 .aft_img3 {
   position: absolute;
-  height:150px;
-  width:150px;
-  right:0;
+  height: 150px;
+  width: 150px;
+  right: 0;
   top: 80%;
   z-index: 0;
 }
@@ -116,15 +142,15 @@ nav {
   background-color: #212121;
 }
 
-#backend-data {
-}
+#backend-data {}
 
 .fixed_some {
   position: fixed;
-  left: 0;
-  bottom: 10;
-  width: 200px;
-  height: 100px;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 80px;
+  z-index: 9999;
 }
 
 /* //Sektioner */
@@ -136,27 +162,24 @@ nav {
 .brand {
   height: 25vh;
   padding: 10vw;
-    -webkit-box-shadow:inset 0px 0px 0px 10px #191818;
-    -moz-box-shadow:inset 0px 0px 0px 10px #191818;
-    box-shadow:inset 0px 0px 0px 10px #191818;
+  -webkit-box-shadow: inset 0px 0px 0px 10px #191818;
+  -moz-box-shadow: inset 0px 0px 0px 10px #191818;
+  box-shadow: inset 0px 0px 0px 10px #191818;
 }
 
 .betaling {
   height: 100%;
   padding: 10vw;
-
 }
 
 .råd {
   height: 100%;
   padding: 10vw;
-
 }
 
 .information {
   height: 100%;
   padding: 10vw;
-
 }
 
 .galleri {
@@ -169,38 +192,39 @@ nav {
   padding: 10vw;
 }
 
+.instagram {
+  height: 100%;
+  padding: 10vw;
+}
+
 footer {
-background-color: #191818;
+  background-color: #191818;
   text-align: center;
   height: 20vh;
-  padding: 10vw;}
+  padding: 10vw;
+}
 
 .aftercare {
   height: auto;
   padding: 10vw;
-    position: relative;
+  position: relative;
 }
 
-
-
-  /* //Sektioner fra Aftercare  */
-
+/* //Sektioner fra Aftercare  */
 .section1 {
   margin-top: 10vh;
   z-index: 99;
 }
+
 .section2 {
   margin-top: 10vh;
   z-index: 99;
-
 }
+
 .section3 {
   margin-top: 10vh;
   z-index: 99;
-
 }
-
-
 
 /* //Loopview  */
 #liste {
@@ -213,15 +237,15 @@ background-color: #191818;
 }
 
 article {
-  width:100%;
+  width: 100%;
 }
 
 .oplæg_img {
-box-shadow: 0px 0px 0px 10px #191818;
+  box-shadow: 0px 0px 0px 10px #191818;
   height: 50vh;
   width: 100%;
   margin-top: 5vh;
-  margin-bottom:5vh;
+  margin-bottom: 5vh;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
@@ -232,12 +256,10 @@ box-shadow: 0px 0px 0px 10px #191818;
 }
 
 .adresse {
-  width:250px;
+  width: 250px;
   margin-left: auto;
   margin-right: auto;
 }
-
-
 
 /* //Knapper til filtrering  */
 .galleri_nav {
@@ -249,54 +271,52 @@ box-shadow: 0px 0px 0px 10px #191818;
   flex-basis: 250px;
 }
 
-
 .filter {
   opacity: 50%;
   text-align: center;
   word-break: normal;
   padding: 10px;
   width: 150px;
-  Height:50px;
-    background: gray;
-    box-shadow: 0px 0px 0px transparent;
-    border: 2px solid black;
-    text-shadow: 0px 0px 0px transparent;
+  Height: 50px;
+  background: gray;
+  box-shadow: 0px 0px 0px transparent;
+  border: 2px solid black;
+  text-shadow: 0px 0px 0px transparent;
 }
-
-
-
 
 /* //Kontakt formular  */
 .kontakt_navn {
   width: 250px;
-    background-color: #585858;
-      margin-top: 2vh;
+  background-color: #585858;
+  margin-top: 2vh;
 }
 
-
-.kontakt_email{
+.kontakt_email {
   width: 250px;
-    background-color: #585858;
-      margin-top: 2vh;
+  background-color: #585858;
+  margin-top: 2vh;
 }
 
 .kontakt_tlf {
   width: 250px;
-    background-color: #585858;
-      margin-top: 2vh;
+  background-color: #585858;
+  margin-top: 2vh;
 }
 
 .kontakt_form {
   width: 250px;
   margin-left: auto;
   margin-right: auto;
-    margin-top: 2vh;
+  margin-top: 2vh;
 }
+
 .wpforms-field-medium {
   width: 250px;
   height: 40px;
   background-color: #373737;
-  border:none;    color: #C8C8C8;
+  border: none;
+  color: #C8C8C8;
+  font-size: 0.8rem;
 }
 
 .wpforms-field-large {
@@ -305,8 +325,9 @@ box-shadow: 0px 0px 0px 10px #191818;
   min-width: 250px;
   height: 100px;
   background-color: #373737;
-  border:none;
-      color: #C8C8C8;
+  border: none;
+  color: #C8C8C8;
+  font-size: 0.8rem;
 }
 
 .wpforms-submit-container {
@@ -314,7 +335,7 @@ box-shadow: 0px 0px 0px 10px #191818;
 }
 
 .wpforms-field-label {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .wpforms-field-hp {
@@ -329,23 +350,40 @@ box-shadow: 0px 0px 0px 10px #191818;
 
 .kontakt_send {
   border: none;
-    margin-top: 2vh;
+  margin-top: 2vh;
   background-color: #585858;
 }
 
 /* //Tekst klasser */
 h1 {
-  width:250px;
-  font-size:2rem;
-    margin-left:auto;
-    margin-right:auto;
+  width: 250px;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
-.brødtekst {margin:30px;
+.brødtekst {
+  margin: 30px;
 }
 
 .navn {
+  text-align: center;
+}
+
+.insta_btn {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.follow_btn {
+  background-color: #212121;
+  color: #585858;
+  font-size: 1.2rem;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -370,33 +408,29 @@ video {
 }
 
 h2 {
-  width:300px;
-  font-size:1.2rem;
-    margin-left:auto;
-    margin-right:auto;
+  width: 300px;
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-
 }
 
 h3 {
-  width:250px;
-  font-size:1.2rem;
-    margin-left:auto;
-    margin-right:auto;
+  width: 250px;
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-
 }
 
 /* //FAQ klasser fra https://www.w3schools.com/howto/howto_js_accordion.asp*/
-
-
 .accordion {
   height: 100px;
   margin-top: 1vh;
   background-color: #585858;
   color: #C8C8C8;
   cursor: pointer;
-    padding: 0 18px;
+  padding: 0 18px;
   width: 100%;
   font-size: 1rem;
   text-align: left;
@@ -408,8 +442,10 @@ h3 {
 .active, .accordion:hover {
   background-color: #474747;
 }
+
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: white;
   float: right;
@@ -417,7 +453,8 @@ h3 {
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
 }
 
 .panel {
@@ -430,8 +467,6 @@ h3 {
 }
 
 /* //Burger menu klasser fra https://codepen.io/mick-mick-gonzaga/pen/yGmemL*/
-
-
 a {
   text-decoration: none;
   color: black;
@@ -499,12 +534,10 @@ a:hover {
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-
 #menuToggle input:checked~span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
-
 
 #menu {
   position: absolute;

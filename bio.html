@@ -19,6 +19,10 @@
     .navigation {
       display: none;
     }
+
+    .splash_img {
+      display: none;
+    }
   </style>
 
 </head>
@@ -71,7 +75,7 @@
     </div>
     <h1 class="overskrift"></h1>
 
-    <div class="bio rowwrapper">
+    <div class="bio">
       <img class="bio_img">
       <div class="bio_txt">
         <h3 class="underoverskrift"></h3>
@@ -83,14 +87,15 @@
 
       <h1 class="overskrift"></h1>
 
-      <div class="insta_feed">
-        <img class="insta1">
-        <img class="insta2">
-        <img class="insta3">
+      <div class="insta_feed rowWrapper">
+        <img class="insta1 insta">
+        <img class="insta2 insta">
+        <img class="insta3 insta">
       </div>
 
-      <div class="btn">
-        <p class="insta_btn"></p>
+      <div class="btn" onclick="window.location.href='https://www.instagram.com/tattoosbyadamv/'">
+        <h2 class="insta_btn"></h2>
+        </button>
       </div>
     </div>
 
@@ -108,8 +113,9 @@
 
     <div class="fixed_some">
       <div class="rowwrapper">
-        <img class="instagram">
-        <img class="facebook">
+        <a href="https://www.instagram.com/tattoosbyadamv"><img class="instagram_ikon"></a>
+
+        <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/"><img class="facebook_ikon"></a>
       </div>
     </div>
   </main>
@@ -147,6 +153,7 @@
       document.querySelector(".insta1").src = biografi.billede1.guid;
       document.querySelector(".insta2").src = biografi.billede2.guid;
       document.querySelector(".insta3").src = biografi.billede3.guid;
+      document.querySelector(".bio_img").src = biografi.selvportraet.guid;
     }
 
 
@@ -159,8 +166,8 @@
       document.querySelector(".email").textContent = genereltIndhold.email;
       document.querySelector(".telefon").textContent = genereltIndhold.tlf;
       document.querySelector(".navn").textContent = genereltIndhold.navn;
-      document.querySelector(".facebook").src = genereltIndhold.facebook.guid;
-      document.querySelector(".instagram").src = genereltIndhold.instagram.guid;
+      document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
+      document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
     }
   </script>
 
