@@ -88,9 +88,11 @@
       <h1 class="overskrift"></h1>
 
       <div class="insta_feed rowWrapper">
+        <img class="venstre">
         <img class="insta1 insta">
         <img class="insta2 insta">
         <img class="insta3 insta">
+        <img class="højre">
       </div>
 
       <div class="btn" onclick="window.location.href='https://www.instagram.com/tattoosbyadamv/'">
@@ -140,12 +142,12 @@
       biografi = await response1.json();
       genereltIndhold = await response2.json();
 
-      visInformation();
+      visBiografi();
       visGenereltIndhold();
     }
 
 
-    function visInformation() {
+    function visBiografi() {
       console.log("Henter biografi...")
       document.querySelector(".underoverskrift").textContent = biografi.overskrift;
       document.querySelector(".brødtekst").textContent = biografi.brdtekst;
@@ -154,6 +156,8 @@
       document.querySelector(".insta2").src = biografi.billede2.guid;
       document.querySelector(".insta3").src = biografi.billede3.guid;
       document.querySelector(".bio_img").src = biografi.selvportraet.guid;
+      document.querySelector(".venstre").src = biografi.venstre.guid;
+      document.querySelector(".højre").src = biografi.hjre.guid;
     }
 
 

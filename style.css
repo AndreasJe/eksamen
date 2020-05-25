@@ -135,6 +135,25 @@ nav {
   z-index: 0;
 }
 
+.venstre {
+  position: absolute;
+  width:30px;
+  height: 15px;
+  z-index: 100;
+  right:90%;
+  top: 40%;
+  object-fit: contain;
+}
+.højre {
+  position: absolute;
+  width:30px;
+  height: 15px;
+  z-index: 100;
+  right:-2;
+  top: 40%;
+  object-fit: contain;
+}
+
 /* //Main content */
 #content {
   width: 100vw;
@@ -195,6 +214,7 @@ nav {
 .instagram {
   height: 100%;
   padding: 10vw;
+  position: relative;
 }
 
 footer {
