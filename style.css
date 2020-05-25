@@ -301,6 +301,8 @@ box-shadow: 0px 0px 0px 10px #191818;
 
 .wpforms-field-large {
   width: 250px;
+  max-width: 250px;
+  min-width: 250px;
   height: 100px;
   background-color: #373737;
   border:none;
@@ -322,10 +324,12 @@ box-shadow: 0px 0px 0px 10px #191818;
 .kontakt_besked {
   margin-top: 2vh;
   background-color: #585858;
+  overflow: hidden;
 }
 
 .kontakt_send {
   border: none;
+    margin-top: 2vh;
   background-color: #585858;
 }
 
