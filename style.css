@@ -64,11 +64,6 @@ body {
 }
 
 /* //Billede klasser */
-.splash_img {
-  width: 100vw;
-  height: 60vw;
-  object-fit: cover;
-}
 
 .bio_img {
   width: 100vw;
@@ -163,11 +158,11 @@ body {
 
 .fixed_some {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 100px;
+  right: 2vw;
+  bottom: 5vh;
+  width: 150px;
   height: 80px;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 /* //Sektioner */
@@ -566,11 +561,27 @@ a:hover {
 
 /* ---------SKJUL KLASSER--------- */
 .video-container {
-  visibility: hidden;
+  display: none;
 }
 
-#navigation {
-  visibility: hidden;
+.bg_video {
+  display: none;
+}
+
+#navigation a {
+  display: none;
+}
+
+.largeBreaker {
+  height: 0;
+}
+
+.navigation {
+  height: 0;
+}
+
+.largeBreaker {
+  height: 0;
 }
 
 /* -----------------TABLET styling-------------- */
@@ -578,11 +589,19 @@ a:hover {
 
   /* ---------SKJUL KLASSER--------- */
   .video-container {
-    visibility: hidden;
+    display: none;
   }
 
-  .navigation {
-    visibility: hidden;
+  .bg_video {
+    display: none;
+  }
+
+  .largeBreaker {
+    display: none;
+  }
+
+  .navigation a {
+    display: none;
   }
 
   .largeBreaker {
@@ -634,55 +653,64 @@ a:hover {
 
   /* ---------Mobile skjul KLASSER--------- */
   #burger {
-    visibility: hidden;
+    display: none;
   }
 
   #menuToggle {
-    visibility: hidden;
+    display: none;
   }
 
-  #navigation {
-    visibility: visible;
+  #navigation a {
+    display: block;
   }
 
   .splash_img {
-    visibility: visible;
-  }
-
-  .bg_video {
-    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 
   /* ---------VIDEO KLASSER--------- */
   .video-container {
     z-index: 99999;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     top: -20;
     left: 0;
+    display: block;
   }
 
   .bg_video {
-    width: 100vw;
+    min-width: 100%;
+    height: auto;
+    display: block;
   }
 
   #mainNAV {
     position: absolute;
     height: 60vh;
-    width: 100vw;
+    width: 100%;
     z-index: 99999;
   }
 
   #navigation {
     position: absolute;
-    top: 60vh;
+    top: 70vh;
     left: 1vw;
     font-size: 3rem;
+    visibility: visible;
   }
 
   #navigation a {
     color: #C8C8C8;
+  }
+
+  .brødtekst {
+    margin: 30px;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* ---------KONTAKT FORMULAR--------- */
