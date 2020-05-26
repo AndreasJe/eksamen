@@ -1,6 +1,7 @@
 html {
   color: #C8C8C8;
-  background-color: #212121;overflow-x: hidden;
+  background-color: #212121;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,16 +34,14 @@ body {
 }
 
 .largeBreaker {
-  height:100vh;
+  height: 100vh;
 }
 
 /* //NAV klasser */
 #mainNAV {
   position: relative;
-  height:10px;
+  height: 10px;
 }
-
-
 
 .logo_img {
   position: absolute;
@@ -565,34 +564,32 @@ a:hover {
   opacity: 1;
 }
 
-
-    /* ---------SKJUL KLASSER--------- */
-
+/* ---------SKJUL KLASSER--------- */
 .video-container {
-  visibility:hidden;
-}
-#navigation {
-  visibility:hidden;
+  visibility: hidden;
 }
 
+#navigation {
+  visibility: hidden;
+}
 
 /* -----------------TABLET styling-------------- */
 @media screen and (min-width: 400px) {
 
-      /* ---------SKJUL KLASSER--------- */
-
+  /* ---------SKJUL KLASSER--------- */
   .video-container {
-    visibility:hidden;
+    visibility: hidden;
   }
+
   .navigation {
-    visibility:hidden;
+    visibility: hidden;
   }
+
   .largeBreaker {
-    display:none;
+    display: none;
   }
 
-    /* ---------KONTAKT FORMULAR--------- */
-
+  /* ---------KONTAKT FORMULAR--------- */
   .kontakt_navn {
     width: 60vw;
     margin-top: 2vh;
@@ -630,73 +627,65 @@ a:hover {
   .wpforms-field-label {
     font-size: 1rem;
   }
-
 }
 
 /* -----------------PC styling-------------- */
 @media screen and (min-width: 1400px) {
 
-
-/* ---------Mobile skjul KLASSER--------- */
-#burger{
-  visibility:hidden;
-}
+  /* ---------Mobile skjul KLASSER--------- */
+  #burger {
+    visibility: hidden;
+  }
 
   #menuToggle {
-    visibility:hidden;
+    visibility: hidden;
   }
 
   #navigation {
-    visibility:visible;
+    visibility: visible;
   }
 
   .splash_img {
-    visibility:visible;
+    visibility: visible;
   }
 
-
-    .bg_video {
-      visibility:visible;
-    }
-
+  .bg_video {
+    visibility: visible;
+  }
 
   /* ---------VIDEO KLASSER--------- */
-.video-container {
-z-index: 99999;
-width:100vw;
-height:100vh;
-overflow:hidden;
-top:-20;
-left:0;
-}
+  .video-container {
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: -20;
+    left: 0;
+  }
 
-.bg_video {
-width:100vw;
-}
+  .bg_video {
+    width: 100vw;
+  }
 
-#mainNAV {
-  position: absolute;
-height:60vh;
-  width:100vw;
-  z-index: 99999;
-}
-
+  #mainNAV {
+    position: absolute;
+    height: 60vh;
+    width: 100vw;
+    z-index: 99999;
+  }
 
   #navigation {
     position: absolute;
-    top:60vh;
-    left:1vw;
+    top: 60vh;
+    left: 1vw;
     font-size: 3rem;
   }
 
   #navigation a {
-
-      color: #C8C8C8;
-
+    color: #C8C8C8;
   }
 
-/* ---------KONTAKT FORMULAR--------- */
-
+  /* ---------KONTAKT FORMULAR--------- */
   .kontakt_navn {
     height: 60px;
     margin-top: 5vh;
