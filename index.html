@@ -7,25 +7,12 @@
   <title>Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 
-  <style media="screen">
-    /* Desktop: display none */
-
-
-    /* Mobil: display none */
-    .video-container {
-      display: none;
-    }
-
-    .navigation {
-      display: none;
-    }
-  </style>
 
 </head>
 
 <body>
 
-  <nav role="navigation_mobile">
+  <nav id="burger" role="navigation_mobile">
     <div id="menuToggle">
       <input type="checkbox" />
 
@@ -53,14 +40,10 @@
     </div>
   </nav>
 
-  <nav>
+  <nav id="mainNAV">
     <a href="index.html">
       <img class="logo_img"></a>
-    <div class="video-container">
-      <video loop muted autoplay class="bg_video">
-      </video>
-    </div>
-    <div class="colwrapper navigation">
+    <div class="colwrapper" id="navigation">
       <a href="bio.html">Bio</a>
       <a href="portfolio.html">Galleri</a>
       <a href="information.html">Info</a>
@@ -69,10 +52,14 @@
     </div>
   </nav>
 
+  <div class="video-container">
+    <video loop muted autoplay class="bg_video">
+    </video>
+  </div>
+
   <main id="content">
 
-
-    <div class="breaker">
+    <div class="largeBreaker">
     </div>
     <div class="velkommen">
       <img class="bg_img">
