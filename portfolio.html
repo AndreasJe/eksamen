@@ -10,36 +10,36 @@
 
 </head>
 
+
+<nav id="burger" role="navigation_mobile">
+  <div id="menuToggle">
+    <input type="checkbox" />
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <a href="bio.html">
+        <li>Bio</li>
+      </a>
+      <a href="portfolio.html">
+        <li>Galleri</li>
+      </a>
+      <a href="information.html">
+        <li>Info</li>
+      </a>
+      <a href="kontakt.html">
+        <li>Kontakt</li>
+      </a>
+      <a href="shop.html">
+        <li>Shop</li>
+      </a>
+    </ul>
+  </div>
+</nav>
+
 <body>
-
-  <nav id="burger" role="navigation_mobile">
-    <div id="menuToggle">
-      <input type="checkbox" />
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-      <ul id="menu">
-        <a href="bio.html">
-          <li>Bio</li>
-        </a>
-        <a href="portfolio.html">
-          <li>Galleri</li>
-        </a>
-        <a href="information.html">
-          <li>Info</li>
-        </a>
-        <a href="kontakt.html">
-          <li>Kontakt</li>
-        </a>
-        <a href="shop.html">
-          <li>Shop</li>
-        </a>
-      </ul>
-    </div>
-  </nav>
-
   <nav id="mainNAV">
     <a href="index.html">
       <img class="logo_img"></a>
@@ -62,13 +62,14 @@
     <div class="galleri_nav">
 
       <div class="rowwrapper">
-        <button class="filter" data-kategorier="traditional">TRADITIONAL</button>
-        <button class="filter" data-kategorier="japanese">JAPANSK</button></div>
-      <div class="rowwrapper">
-        <button class="filter" data-kategorier="black and grey realism">BLACK & GREY REALISM</button>
-        <button class="filter" data-kategorier="andet">ANDET</button></div>
+        <div class="wrapper">
+          <button class="filter" data-kategorier="traditional">TRADITIONAL</button>
+          <button class="filter" data-kategorier="japanese">JAPANSK</button></div>
+        <div class="wrapper">
+          <button class="filter" data-kategorier="black and grey realism">BLACK & GREY REALISM</button>
+          <button class="filter" data-kategorier="andet">ANDET</button></div>
 
-
+      </div>
 
 
       <h1 class="overskrift2"></h1>
@@ -80,7 +81,7 @@
 
       <template>
         <article>
-          <img class="oplæg_img">
+          <img class="oplaeg_img">
         </article>
       </template>
 
@@ -144,7 +145,7 @@
         if (filteret == "alle" || filteret == billede.kategorier) {
           const clone = template.cloneNode(true).content;
 
-          clone.querySelector(".oplæg_img").src = billede.billede.guid;
+          clone.querySelector(".oplaeg_img").src = billede.billede.guid;
 
 
 

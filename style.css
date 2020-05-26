@@ -1,17 +1,19 @@
 html {
+  margin: 0;
+  padding: 0;
   color: #C8C8C8;
   background-color: #212121;
   overflow-x: hidden;
+  width: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   -webkit-box-shadow: inset 0px 0px 0px 10px #191818;
   -moz-box-shadow: inset 0px 0px 0px 10px #191818;
   box-shadow: inset 0px 0px 0px 10px #191818;
   background-color: #212121;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .colwrapper {
@@ -57,14 +59,7 @@ body {
   margin-right: auto
 }
 
-.fullscreen-bg {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
 /* //Billede klasser */
-
 .bio_img {
   width: 100vw;
   border-top: 10px solid;
@@ -75,8 +70,8 @@ body {
 
 .insta {
   width: 25%;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
   border: 5px black solid;
   line-height: 50px;
 }
@@ -149,7 +144,7 @@ body {
 
 /* //Main content */
 #content {
-  width: 100vw;
+  width: 90vw;
   height: 130%;
   background-color: #212121;
 }
@@ -169,11 +164,21 @@ body {
 .velkommen {
   height: 100%;
   padding: 10vw;
+  position: relative;
+  z-index: 0;
+}
+
+.bio {
+  height: 100%;
+  padding: 10vw;
+  position: relative;
+  z-index: 0;
 }
 
 .brand {
+  width: 100%;
   height: 25vh;
-  padding: 10vw;
+  padding: 3vw;
   -webkit-box-shadow: inset 0px 0px 0px 10px #191818;
   -moz-box-shadow: inset 0px 0px 0px 10px #191818;
   box-shadow: inset 0px 0px 0px 10px #191818;
@@ -195,6 +200,7 @@ body {
 }
 
 .galleri {
+  width: 100%;
   height: 100%;
   padding: 0 10vw;
 }
@@ -206,15 +212,18 @@ body {
 
 .instagram {
   height: 100%;
-  padding: 10vw;
+  width:100%;
+  margin:auto;
+  padding: 3vw;
   position: relative;
 }
 
 footer {
+  width: 100%;
   background-color: #191818;
   text-align: center;
+  padding: 3vw;
   height: 20vh;
-  padding: 10vw;
 }
 
 .aftercare {
@@ -253,7 +262,7 @@ article {
   width: 100%;
 }
 
-.oplæg_img {
+.oplaeg_img {
   box-shadow: 0px 0px 0px 10px #191818;
   height: 50vh;
   width: 100%;
@@ -462,6 +471,10 @@ h3 {
 }
 
 /* //Burger menu klasser fra https://codepen.io/mick-mick-gonzaga/pen/yGmemL*/
+#burger {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -559,6 +572,22 @@ a:hover {
   opacity: 1;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+  .bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 50%;
+    filter: grayscale(100%);
+  }
+
 /* ---------SKJUL KLASSER--------- */
 .video-container {
   display: none;
@@ -582,6 +611,10 @@ a:hover {
 
 .largeBreaker {
   height: 0;
+}
+
+.splash_img {
+  display: none;
 }
 
 /* -----------------TABLET styling-------------- */
@@ -668,6 +701,16 @@ a:hover {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    display: block;
+  }
+
+  .bio_img {
+    width: 800px;
+    height: auto;
+    border: 10px solid;
+    border-color: #191818;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* ---------VIDEO KLASSER--------- */
@@ -676,7 +719,7 @@ a:hover {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    top: -20;
+    top: 0;
     left: 0;
     display: block;
   }
@@ -694,6 +737,18 @@ a:hover {
     z-index: 99999;
   }
 
+  .bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 50%;
+    filter: grayscale(100%);
+  }
+
   #navigation {
     position: absolute;
     top: 70vh;
@@ -708,7 +763,7 @@ a:hover {
 
   .brødtekst {
     margin: 30px;
-    width:60%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -752,6 +807,75 @@ a:hover {
   .wpforms-field-label {
     font-size: 1.5rem;
     height: 80px;
+  }
+
+  /* //Loopview  */
+  #liste {
+    max-width: 80vw;
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .oplaeg_img {
+    box-shadow: 0px 0px 0px 10px #191818;
+    height: 50vh;
+    width: 80%;
+  }
+
+  .galleri_nav {
+    height: auto;
+    width: 100vw;
+    padding: 0 10vw;
+    flex-basis: 250px;
+  }
+
+  /* //Sektioner  */
+  .velkommen {
+    padding: 1vw;
+  }
+
+  .bio {
+    padding: 1vw;
+  }
+
+  .brand {
+    padding: 1vw;
+  }
+
+  .betaling {
+    padding: 1vw;
+  }
+
+  .råd {
+    padding: 1vw;
+  }
+
+  .information {
+    padding: 1vw;
+  }
+
+  .galleri {
+    padding: 0 1vw;
+  }
+
+  .kontakt_formular {
+    padding: 1vw;
+  }
+
+  .instagram {
+    padding: 1vw;
+  }
+
+  footer {
+    padding: 1vw;
+  }
+
+  .aftercare {
+    padding: 1vw;
   }
 }
 
