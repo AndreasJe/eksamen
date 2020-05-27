@@ -931,7 +931,7 @@ a:hover {
     display: block;
     top: 5%;
     width: 500px;
-    height: 600px;
+    height: 100%;
     object-fit: cover;
     max-height: 100%;
     border: 10px solid;
@@ -981,17 +981,6 @@ a:hover {
     height: 100vh;
     object-fit: cover;
     display: block;
-  }
-
-  .bio_img {
-    position: absolute;
-    width: 400px;
-    height: 100%;
-    border: 10px solid;
-    border-color: #191818;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 0;
   }
 
   .bg_img {
@@ -1122,8 +1111,8 @@ a:hover {
     position: absolute;
     display: block;
     top: 5%;
-    width: 700px;
-    height: 400px;
+    width: 600px;
+    height: 100%;
     object-fit: cover;
     max-height: 100%;
     border: 10px solid;
