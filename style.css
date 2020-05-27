@@ -473,12 +473,12 @@ p {
 
 /* //FAQ klasser fra https://www.w3schools.com/howto/howto_js_accordion.asp*/
 .accordion {
-  height: 100px;
+  height: 50px;
   margin-top: 1vh;
   background-color: #585858;
   color: #C8C8C8;
   cursor: pointer;
-  width: 90%;
+  width: 80%;
   font-size: 1rem;
   text-align: left;
   border: none;
@@ -494,12 +494,12 @@ p {
 }
 
 .accordion:after {
-  content: '\02795';
+  /* content: '\02795';*/
   /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: white;
   float: right;
-  margin-top: -10px;
+  margin-top: -50px;
 }
 
 .active:after {
@@ -512,7 +512,7 @@ p {
   margin-bottom: 20px;
   background-color: #373737;
   max-height: 0;
-  width: 90%;
+  width: 60%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   margin-left: auto;
@@ -913,7 +913,6 @@ a:hover {
   #liste {
     max-width: 80vw;
     display: grid;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     margin-left: auto;
@@ -1049,17 +1048,16 @@ a:hover {
   #liste {
     max-width: 80vw;
     display: grid;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
+    grid-gap: 10px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .oplaeg_img {
     box-shadow: 0px 0px 0px 10px #191818;
-    height: 50vh;
-    width: 80%;
+    height: 500px;
+    width: 100%;
   }
 
   .galleri_nav {
@@ -1168,6 +1166,15 @@ a:hover {
 
   #navigation {
     z-index: 9;
+  }
+
+  .accordion {
+    height: 65px;
+    margin-top: 1vh;
+    background-color: #585858;
+    color: #C8C8C8;
+    cursor: pointer;
+    width: 60%;
   }
 }
 
