@@ -7,24 +7,27 @@
   <title>Kontakt | Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style media="screen">
-    .splash_img {
-      width: 100%;
-      height: 60vh;
-      object-fit: cover;
-      display: block;
-    }
+    @media screen and (min-width: 1400px) {
+      .splash_img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        display: block;
+      }
 
-    header {
-      min-height: 60vh;
-    }
+      header {
+        min-height: 60vh;
+      }
 
-    #navigation {
-      position: absolute;
-      top: 35vh;
-    }
+      #navigation {
+        position: absolute;
+        top: 40vh;
+        left: 2vw;
+      }
 
-    .smallBreaker {
-      display: none;
+      .retract {
+        margin-top: -30px;
+      }
     }
   </style>
 
@@ -74,7 +77,7 @@
 
 <body>
   <main id="content">
-    <h1 class="overskrift"></h1>
+    <h1 class="overskrift retract"></h1>
     <div class="smallBreaker">
     </div>
 
@@ -145,7 +148,7 @@
 
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
-      document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
       document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".adresse").innerHTML = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
@@ -153,7 +156,7 @@
       document.querySelector(".navn").textContent = genereltIndhold.navn;
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
-      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash4.guid;
     }
   </script>
 

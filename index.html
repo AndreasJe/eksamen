@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style media="screen">
+    .velkommen {
+      margin-top: 0;
+    }
+  </style>
 
 
 </head>
@@ -123,7 +128,7 @@
 
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
-      document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
       document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".adresse").textContent = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
