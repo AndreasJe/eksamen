@@ -7,7 +7,6 @@
   <title>Bio | Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 
-
 </head>
 <header>
 
@@ -26,7 +25,7 @@
           <li>Bio</li>
         </a>
         <a href="portfolio.html">
-          <li>Galleri</li>
+          <li>Portfolio</li>
         </a>
         <a href="information.html">
           <li>Info</li>
@@ -44,22 +43,19 @@
   <nav id="mainNAV">
     <div class="colwrapper" id="navigation">
       <a href="bio.html">Bio</a>
-      <a href="portfolio.html">Galleri</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="information.html">Info</a>
       <a href="kontakt.html">Kontakt</a>
       <a href="shop.html">Shop</a>
     </div>
   </nav>
 
-  <div class="video-container">
-    <video loop muted autoplay class="bg_video">
-    </video>
-  </div>
+  <img class="splash_img">
 </header>
 
 <body>
   <main id="content">
-    <h1 class="overskrift"></h1>
+    <h1 class="overskrift1"></h1>
 
     <div class="bio">
       <img class="bio_img">
@@ -71,7 +67,7 @@
 
     <div class="instagram">
 
-      <h1 class="overskrift"></h1>
+      <h1 class="overskrift2"></h1>
 
       <div class="insta_feed rowWrapper">
         <img class="venstre">
@@ -87,12 +83,10 @@
       </div>
     </div>
 
-    <div class="brand">
+    <footer>
       <h3 class="navn"></h3>
       <img class="btm_logo_img">
-    </div>
 
-    <footer>
       <p class="adresse"></p>
       <p class="telefon"></p>
       <p class="email"></p>
@@ -135,7 +129,9 @@
 
     function visBiografi() {
       console.log("Henter biografi...")
-      document.querySelector(".underoverskrift").textContent = biografi.overskrift;
+      document.querySelector(".overskrift1").textContent = biografi.overskrift;
+      document.querySelector(".overskrift2").textContent = biografi.overskrift2;
+      document.querySelector(".underoverskrift").textContent = biografi.underoverskrift;
       document.querySelector(".brødtekst").textContent = biografi.brdtekst;
       document.querySelector(".insta_btn").textContent = biografi.flg_mig_tekst;
       document.querySelector(".insta1").src = biografi.billede1.guid;
@@ -152,13 +148,13 @@
       console.log("Henter generelt indhold...")
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
-      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
       document.querySelector(".adresse").textContent = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
       document.querySelector(".telefon").textContent = genereltIndhold.tlf;
       document.querySelector(".navn").textContent = genereltIndhold.navn;
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
     }
   </script>
 

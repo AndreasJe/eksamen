@@ -45,17 +45,14 @@
   <nav id="mainNAV">
     <div class="colwrapper" id="navigation">
       <a href="bio.html">Bio</a>
-      <a href="portfolio.html">Galleri</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="information.html">Info</a>
       <a href="kontakt.html">Kontakt</a>
       <a href="shop.html">Shop</a>
     </div>
   </nav>
 
-  <div class="video-container">
-    <video loop muted autoplay class="bg_video">
-    </video>
-  </div>
+  <img class="splash_img">
 </header>
 
 <body>
@@ -64,7 +61,7 @@
     <h1 class="overskrift">Portfolio</h1>
     <div class="galleri_nav">
 
-      <div class="rowwrapper">
+      <div class="rowwrapper knapper">
         <div class="wrapper">
           <button class="filter" data-kategorier="traditional">TRADITIONAL</button>
           <button class="filter" data-kategorier="japanese">JAPANSK</button></div>
@@ -91,12 +88,10 @@
     </div>
 
 
-    <div class="brand">
+    <footer>
       <h3 class="navn"></h3>
       <img class="btm_logo_img">
-    </div>
 
-    <footer>
       <p class="adresse"></p>
       <p class="telefon"></p>
       <p class="email"></p>
@@ -189,8 +184,8 @@
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
-      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
       document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
     }
   </script>
 

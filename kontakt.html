@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt | Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style media="screen">
+    .smallBreaker {
+      display: none;
+    }
+  </style>
 
 
 </head>
@@ -51,10 +56,7 @@
     </div>
   </nav>
 
-  <div class="video-container">
-    <video loop muted autoplay class="bg_video">
-    </video>
-  </div>
+  <img class="splash_img">
 </header>
 
 <body>
@@ -72,18 +74,17 @@
     <div class="smallBreaker">
     </div>
 
-    <div class="brand">
-      <h3 class="navn"></h3>
-      <img class="btm_logo_img" src="" alt="">
-    </div>
-
-    <footer>
-      <p class="adresse"></p>
-      <p class="telefon"></p>
-      <p class="email"></p>
-    </footer>
 
   </main>
+  <footer>
+
+    <h3 class="navn"></h3>
+    <img class="btm_logo_img">
+
+    <p class="adresse"></p>
+    <p class="telefon"></p>
+    <p class="email"></p>
+  </footer>
 
   <div class="fixed_some">
     <div class="rowwrapper">
@@ -119,6 +120,7 @@
 
     function visKontakt() {
       console.log("Henter kontakt formular...")
+      document.querySelector(".overskrift").textContent = kontakt.title.rendered;
       document.querySelector("#backend-data").innerHTML = kontakt.content.rendered;
 
     }
@@ -129,13 +131,13 @@
       console.log("Henter generelt indhold...")
       document.querySelector(".logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
-      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
       document.querySelector(".adresse").innerHTML = genereltIndhold.adresse;
       document.querySelector(".email").textContent = genereltIndhold.email;
       document.querySelector(".telefon").textContent = genereltIndhold.tlf;
       document.querySelector(".navn").textContent = genereltIndhold.navn;
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash.guid;
     }
   </script>
 
