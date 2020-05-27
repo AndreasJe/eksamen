@@ -493,6 +493,7 @@ p {
   text-decoration: underline;
   padding: 10px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .follow_btn {
