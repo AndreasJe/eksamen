@@ -14,11 +14,12 @@ body {
   padding: 10px;
   overflow-x: hidden;
   box-sizing: border-box;
+  margin: 0;
 }
 
 header {
   position: relative;
-  min-height: 150px;
+  min-height: 100vh;
   width: 100%;
   object-fit: cover;
   z-index: 150;
@@ -55,8 +56,8 @@ header {
 
 .logo_img {
   position: absolute;
-  width: 60px;
-  left: 2vh;
+  width: 100px;
+  left: 4vh;
   top: 2vh;
   z-index: 9;
 }
@@ -1026,6 +1027,7 @@ a:hover {
     min-width: 100%;
     height: auto;
     display: block;
+    object-fit: contain;
   }
 
   #mainNAV {
@@ -1169,6 +1171,14 @@ a:hover {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .forside_link {
+    z-index: 99;
+  }
+
+  #navigation {
+    z-index: 9;
   }
 }
 
