@@ -1148,17 +1148,17 @@ a:hover {
   .bio .brødtekst {
     margin-left: 0;
     width: 65%;
-    margin-left: -65px;
+    margin-left: 10px;
   }
 
   .bio_txt h3 {
     margin-left: 0;
     width: 300px;
-    margin-left: -57px;
+    margin-left: 10px;
   }
 
   .insta_feed {
-    padding: 0 220px;
+    padding: 0 190px;
   }
 
   .venstre {
