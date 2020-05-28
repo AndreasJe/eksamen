@@ -645,7 +645,7 @@ p {
   margin-bottom: 20px;
   background-color: #373737;
   max-height: 0;
-  width: 60%;
+  width: 80%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   margin-left: auto;
@@ -942,6 +942,10 @@ a:hover {
     margin-bottom: 4px;
     text-align: center;
     margin-top: 50px;
+  }
+
+  .panel {
+    width: 80%;
   }
 
   .panel p {
