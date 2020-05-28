@@ -10,6 +10,27 @@
     .velkommen {
       margin-top: 0;
     }
+
+    .pynt1 {
+      display: block;
+      top: -200px;
+      right: -150px;
+      width: 600px;
+      position: absolute;
+      z-index: 999999999999999;
+    }
+
+    @media screen and (min-width: 1200px) {
+      .pynt2 {
+        display: block;
+        top: 60vh;
+        left: -200px;
+        width: 600px;
+        position: absolute;
+        z-index: 999999999999999;
+      }
+
+    }
   </style>
 
 
@@ -57,6 +78,16 @@
 </header>
 
 <body>
+  <div class="pynt_container">
+
+    <img class="pynt1">
+    <img class="pynt2">
+    <img class="pynt3">
+    <img class="pynt4">
+    <img class="pynt5">
+
+  </div>
+
   <main id="content">
 
     <div class="largeBreaker">
@@ -136,6 +167,8 @@
       document.querySelector(".navn").textContent = genereltIndhold.navn;
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
+      document.querySelector(".pynt1").src = genereltIndhold.pyntforside1.guid;
+      document.querySelector(".pynt2").src = genereltIndhold.pyntforside2.guid;
     }
   </script>
 

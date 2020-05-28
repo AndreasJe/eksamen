@@ -25,6 +25,21 @@ header {
   z-index: 150;
 }
 
+.pynt_container {
+  width: 100vw;
+  position: relative;
+  height: 100%;
+  margin: 0;
+}
+
+.pynt1 {
+  display: none;
+}
+
+.pynt2 {
+  display: none;
+}
+
 /* Popup */
 .modal {
   display: none;
@@ -50,7 +65,6 @@ header {
   /*display: none;*/
   transition: all 1s;
   opacity: 0;
-  pointer-events: none;
 }
 
 #modal-content {
@@ -63,7 +77,6 @@ header {
 #modal.vis {
   display: none;
   opacity: 1;
-  pointer-events: all;
 }
 
 #modal_img {
@@ -617,25 +630,22 @@ p {
 }
 
 .accordion:after {
-  /* content: '\02795';*/
-  /* Unicode character for "plus" sign (+) */
+  /* content: '\02795'; */
   font-size: 13px;
   color: white;
   float: right;
   margin-top: -50px;
 }
 
-.active:after {
+/* .active:after {
   content: "\2796";
-  /* Unicode character for "minus" sign (-) */
-}
-
+}*/
 .panel {
   display: block;
   margin-bottom: 20px;
   background-color: #373737;
   max-height: 0;
-  width: 80%;
+  width: 60%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   margin-left: auto;
@@ -832,8 +842,6 @@ a:hover {
 
   .knapper {
     width: 300px;
-    margin-left: (50% - 150px);
-    margin-right: (50% - 150px);
     margin-top: 50px;
   }
 
@@ -1142,11 +1150,13 @@ a:hover {
 
   .splash_img {
     width: 100%;
+    display: inline-block;
     height: 100vh;
     object-fit: cover;
-    display: block;
     border: none;
     z-index: 0;
+    top: 0;
+    left: 0;
     position: static;
   }
 
@@ -1300,12 +1310,13 @@ a:hover {
     max-height: 100%;
     border: 10px solid;
     border-color: #191818;
-    margin-left: 10%;
+    margin-left: 4%;
     margin-right: auto;
     z-index: -1;
   }
 
   .bio {
+    padding: 0 5%;
     margin-top: 100px;
     overflow: visible;
     height: 100%;
