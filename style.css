@@ -1064,7 +1064,7 @@ a:hover {
 }
 
 /* -----------------PC styling-------------- */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1000px) {
 
   /* ---------Mobile skjul KLASSER--------- */
   #burger {
@@ -1119,11 +1119,12 @@ a:hover {
   }
 
   .bg_video {
+    width: 100%;
     min-width: 100%;
     height: auto;
     min-height: 100vh;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   #mainNAV {
@@ -1278,7 +1279,7 @@ a:hover {
 
   .grid {
     grid-template-columns: 300px 300px 300px;
-    padding: 0 25vw;
+    padding: 0 15vw;
   }
 
   #content {
@@ -1349,7 +1350,7 @@ a:hover {
 }
 
 /* -----------------UHD styling-------------- */
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 2000px) {
   #content {
     max-width: 2000px;
     padding: 0;
@@ -1364,5 +1365,9 @@ a:hover {
 
   .filter {
     width: 500px;
+  }
+
+  .grid {
+    padding: 0 25vw;
   }
 }
