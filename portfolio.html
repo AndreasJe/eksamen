@@ -88,7 +88,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <img class=".modal-billede" alt="">
+      <img id="modal_img">
     </div>
 
   </div>
@@ -152,7 +152,7 @@
     let urlParams = new URLSearchParams(window.location.search);
     //returner værdien for variablen "id"
     let id = urlParams.get("id");
-    let billeder = []
+    let billeder
     const liste = document.querySelector("#liste");
     const template = document.querySelector("template");
     let filteret = "alle";
@@ -191,7 +191,6 @@
 
           clone.querySelector("article").addEventListener("click", () => {
             visModal(billede)
-            location.href = `portfolio.html?id=${billede.id}`;
 
 
           })
@@ -214,7 +213,7 @@
         elm.classList.remove("valgt");
       });
       this.classList.add("valgt");
-      visPortfolio();
+      visPortfolio(modalbillede);
     }
 
 
@@ -234,7 +233,7 @@
     function visModal(billede) {
       document.querySelector(".modal").style.display = "block";
       document.querySelector(".close").addEventListener("click", skjulModal);
-      document.querySelector(".modal-billede").src = billede.guid;
+      document.querySelector("#modal_img").src = billede.billede.guid;
     }
 
     function skjulModal() {

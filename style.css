@@ -66,11 +66,15 @@ header {
   pointer-events: all;
 }
 
-.modal-billede {
+#modal_img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  max-width: 100%;
+  max-height: 80vh;
+  margin-top: 10vh;
+  border: 10px black solid;
 }
 
 .close {
@@ -371,7 +375,7 @@ article {
 
 .oplaeg_img {
   box-shadow: 0px 0px 0px 10px #191818;
-  height: 50vh;
+  height: 350px;
   width: 100%;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -1121,7 +1125,7 @@ a:hover {
 }
 
 /* -----------------PC styling-------------- */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
 
   /* ---------Mobile skjul KLASSER--------- */
   #burger {
@@ -1223,7 +1227,7 @@ a:hover {
 
   .oplaeg_img {
     box-shadow: 0px 0px 0px 10px #191818;
-    height: 600px;
+    height: 500px;
     width: 100%;
   }
 
@@ -1374,7 +1378,7 @@ a:hover {
     height: 50px;
     width: 100vw;
     flex-direction: row;
-    margin-left: 25%;
+    margin-left: 24.3%;
     margin-right: 25%;
     margin-bottom: 0;
     margin-top: 50px;
@@ -1426,5 +1430,11 @@ a:hover {
 
   .grid {
     padding: 0 25vw;
+  }
+
+  .oplaeg_img {
+    box-shadow: 0px 0px 0px 10px #191818;
+    height: 600px;
+    width: 100%;
   }
 }
