@@ -1014,7 +1014,7 @@ a:hover {
 
   /*   // BILLEDE KLASSER  */
   .insta {
-    height: 250px;
+    height: 400px;
   }
 
   .aft_img1 {
@@ -1331,16 +1331,16 @@ a:hover {
   }
 
   .venstre {
-    left: 24vw;
+    left: -1vw;
   }
 
   .hoejre {
-    right: 24vw;
+    right: -1vw;
   }
 
   .grid {
-    grid-template-columns: 300px 300px 300px;
-    padding: 0 15vw;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   #content {
@@ -1406,7 +1406,8 @@ a:hover {
   }
 
   .insta {
-    height: 350px;
+    height: 650px;
+    width: 100%;
   }
 }
 
@@ -1429,7 +1430,16 @@ a:hover {
   }
 
   .grid {
-    padding: 0 25vw;
+    grid-template-columns: 2fr 2fr 2fr;
+    width: none;
+  }
+
+  .insta_feed {
+    max-width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
   }
 
   .oplaeg_img {
