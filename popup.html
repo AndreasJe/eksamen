@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Adam Vecht</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style media="screen">
+    @media screen and (min-width: 1400px) {
+      .splash_img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        display: block;
+      }
+
+      header {
+        min-height: 60vh;
+      }
+
+      #navigation {
+        position: absolute;
+        top: 40vh;
+        left: 2vw;
+      }
+
+      .retract {
+        position: absolute;
+        margin-top: -30px;
+        text-align: center;
+        left: 50%;
+        margin-left: -400px;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <main id="single">
+    <button class="luk">Tilbage</button>
+    <section class="indhold">
+      <article class="billede_stort">
+        <img>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    //find parametre (variabler) i url'en
+    let urlParams = new URLSearchParams(window.location.search);
+    //returner værdien for variablen "id"
+    let id = urlParams.get("id");
+    let ret;
+    document.addEventListener("DOMContentLoaded", getJson);
+
+    async function getJson() {
+      //hent en enkelt ret udfra id'et
+      let jsonData = await fetch(`http://adam.duedrengen.dk/wp-json/wp/v2/tattoo/${id}`);
+      ret = await jsonData.json();
+      visPopup();
+    }
+    //vis data om retten
+    function visPopup() {
+      document.querySelector("img").src = billede.guid;
+    }
+
+    document.querySelector(".luk").addEventListener("click", () => {
+      //link tilbage til den foregående side på "luk" knappen
+      history.back();
+    })
+  </script>
+
+
+  <!-- HTML SLUT -->
+
+</body>
+
+</html>

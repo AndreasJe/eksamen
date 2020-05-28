@@ -46,18 +46,18 @@
       <span></span>
 
       <ul id="menu">
-        <a href="bio.html">
-          <li>Biografi</li>
-        </a>
-        <a href="portfolio.html">
-          <li>Portfolio</li>
-        </a>
-        <a href="information.html">
-          <li>Information</li>
-        </a>
-        <a href="kontakt.html">
-          <li>Kontakt</li>
-        </a>
+        <li>
+          <a href="bio.html">Biografi</a></li>
+
+        <li>
+          <a href="portfolio.html">Portfolio</a></li>
+
+        <li>
+          <a href="information.html">Information</a></li>
+
+        <li>
+          <a href="kontakt.html">Kontakt </a></li>
+
       </ul>
     </div>
   </nav>
@@ -85,89 +85,89 @@
     <div class="information">
       <h2 class="section_overskrift"></h2>
       <h3 class="underoverskrift"></h3>
-      <p class="brødtekst"></p>
+      <p class="broedtekst"></p>
 
     </div>
     <!--
-    //Containers får defineret højde, mens klik på spørgsmål udvider "spørgsmål", så anden container vises. -->
+    //Containers faar defineret hoejde, mens klik på spoergsmaal udvider "spoergsmaal", så anden container vises. -->
     <div class="betaling">
       <h1 class="overskrift2"></h1>
 
-      <button class="accordion">
-        <p class="btl_spørgsmål1"></p>
-      </button>
+      <div class="accordion">
+        <p class="btl_spoergsmaal1"></p>
+      </div>
       <div class="panel">
         <p class="btl_svar1"></p>
       </div>
 
-      <button class="accordion">
-        <p class="btl_spørgsmål2"></p>
-      </button>
+      <div class="accordion">
+        <p class="btl_spoergsmaal2"></p>
+      </div>
       <div class="panel">
         <p class="btl_svar2"></p>
       </div>
 
-      <button class="accordion">
-        <p class="btl_spørgsmål3"></p>
-      </button>
+      <div class="accordion">
+        <p class="btl_spoergsmaal3"></p>
+      </div>
       <div class="panel">
         <p class="btl_svar3"></p>
       </div>
 
-      <button class="accordion">
-        <p class="btl_spørgsmål4"></p>
-      </button>
+      <div class="accordion">
+        <p class="btl_spoergsmaal4"></p>
+      </div>
       <div class="panel">
         <p class="btl_svar4"></p>
       </div>
 
-      <button class="accordion">
-        <p class="btl_spørgsmål5"></p>
-      </button>
+      <div class="accordion">
+        <p class="btl_spoergsmaal5"></p>
+      </div>
       <div class="panel">
         <p class="btl_svar5"></p>
       </div>
     </div>
 
     <!--
-    //Containers får defineret højde, mens klik på spørgsmål udvider "spørgsmål", så anden container vises. -->
-    <div class="råd">
+    //Containers faar defineret hoejde, mens klik på spoergsmaal udvider "spoergsmaal", så anden container vises. -->
+    <div class="raad">
       <h1 class="overskrift3"></h1>
 
 
-      <button class="accordion">
-        <p class="råd_spørgsmål1"></p>
-      </button>
+      <div class="accordion">
+        <p class="raad_spoergsmaal1"></p>
+      </div>
       <div class="panel">
-        <p class="råd_svar1"></p>
+        <p class="raad_svar1"></p>
       </div>
 
-      <button class="accordion">
-        <p class="råd_spørgsmål2"></p>
-      </button>
+      <div class="accordion">
+        <p class="raad_spoergsmaal2"></p>
+      </div>
       <div class="panel">
-        <p class="råd_svar2"></p>
+        <p class="raad_svar2"></p>
       </div>
 
-      <button class="accordion">
-        <p class="råd_spørgsmål3"></p>
-      </button>
+      <div class="accordion">
+        <p class="raad_spoergsmaal3"></p>
+      </div>
       <div class="panel">
-        <p class="råd_svar3"></p>
+        <p class="raad_svar3"></p>
       </div>
 
-      <button class="accordion">
-        <p class="råd_spørgsmål4"></p>
-      </button>
+      <div class="accordion">
+        <p class="raad_spoergsmaal4"></p>
+      </div>
       <div class="panel">
-        <p class="råd_svar4"></p>
+        <p class="raad_svar4"></p>
       </div>
 
-      <button class="accordion">
-        <p class="råd_spørgsmål5"></p>
-      </button>
+      <div class="accordion">
+        <p class="raad_spoergsmaal5"></p>
+      </div>
       <div class="panel">
-        <p class="råd_svar5"></p>
+        <p class="raad_svar5"></p>
       </div>
 
     </div>
@@ -249,7 +249,7 @@
 
     let information
     let betaling
-    let goderåd
+    let goderaad
     let genereltIndhold
     let aftercare
 
@@ -268,13 +268,13 @@
 
       information = await response1.json();
       genereltIndhold = await response2.json();
-      goderåd = await response3.json();
+      goderaad = await response3.json();
       aftercare = await response4.json();
       betaling = await response5.json();
 
       visInformation();
       visBetaling();
-      visGodeRåd();
+      visGodeRaad();
       visAftercare();
       visEventlisteners();
       visGenereltIndhold();
@@ -285,39 +285,39 @@
       console.log("Henter information...")
       document.querySelector(".overskrift1").textContent = information.overskrift;
       document.querySelector(".underoverskrift").textContent = information.underoverskrift;
-      document.querySelector(".brødtekst").innerHTML = information.tekst;
+      document.querySelector(".broedtekst").innerHTML = information.tekst;
     }
 
 
     function visBetaling() {
       console.log("Henter FAQ kategori - Booking og Betaling..")
       document.querySelector(".overskrift2").textContent = betaling.overskrift;
-      document.querySelector(".btl_spørgsmål1").textContent = betaling.spg1;
+      document.querySelector(".btl_spoergsmaal1").textContent = betaling.spg1;
       document.querySelector(".btl_svar1").textContent = betaling.svar1;
-      document.querySelector(".btl_spørgsmål2").textContent = betaling.spg2;
+      document.querySelector(".btl_spoergsmaal2").textContent = betaling.spg2;
       document.querySelector(".btl_svar2").textContent = betaling.svar2;
-      document.querySelector(".btl_spørgsmål3").textContent = betaling.spg3;
+      document.querySelector(".btl_spoergsmaal3").textContent = betaling.spg3;
       document.querySelector(".btl_svar3").textContent = betaling.svar3;
-      document.querySelector(".btl_spørgsmål4").textContent = betaling.spg4;
+      document.querySelector(".btl_spoergsmaal4").textContent = betaling.spg4;
       document.querySelector(".btl_svar4").textContent = betaling.svar4;
-      document.querySelector(".btl_spørgsmål5").textContent = betaling.spg5;
+      document.querySelector(".btl_spoergsmaal5").textContent = betaling.spg5;
       document.querySelector(".btl_svar5").textContent = betaling.svar5;
     }
 
 
-    function visGodeRåd() {
-      console.log("Henter FAQ kategori - Gode Råd Før Tatovering...")
-      document.querySelector(".overskrift3").textContent = goderåd.overskrift;
-      document.querySelector(".råd_spørgsmål1").textContent = goderåd.spg1;
-      document.querySelector(".råd_svar1").textContent = goderåd.svar1;
-      document.querySelector(".råd_spørgsmål2").textContent = goderåd.spg2;
-      document.querySelector(".råd_svar2").textContent = goderåd.svar2;
-      document.querySelector(".råd_spørgsmål3").textContent = goderåd.spg3;
-      document.querySelector(".råd_svar3").textContent = goderåd.svar3;
-      document.querySelector(".råd_spørgsmål4").textContent = goderåd.spg4;
-      document.querySelector(".råd_svar4").textContent = goderåd.svar4;
-      document.querySelector(".råd_spørgsmål5").textContent = goderåd.spg5;
-      document.querySelector(".råd_svar5").textContent = goderåd.svar5;
+    function visGodeRaad() {
+      console.log("Henter FAQ kategori - Gode Raad Foer Tatovering...")
+      document.querySelector(".overskrift3").textContent = goderaad.overskrift;
+      document.querySelector(".raad_spoergsmaal1").textContent = goderaad.spg1;
+      document.querySelector(".raad_svar1").textContent = goderaad.svar1;
+      document.querySelector(".raad_spoergsmaal2").textContent = goderaad.spg2;
+      document.querySelector(".raad_svar2").textContent = goderaad.svar2;
+      document.querySelector(".raad_spoergsmaal3").textContent = goderaad.spg3;
+      document.querySelector(".raad_svar3").textContent = goderaad.svar3;
+      document.querySelector(".raad_spoergsmaal4").textContent = goderaad.spg4;
+      document.querySelector(".raad_svar4").textContent = goderaad.svar4;
+      document.querySelector(".raad_spørgsmaal5").textContent = goderaad.spg5;
+      document.querySelector(".raad_svar5").textContent = goderaad.svar5;
     }
 
 

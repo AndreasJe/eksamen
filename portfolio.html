@@ -49,18 +49,18 @@
       <span></span>
 
       <ul id="menu">
-        <a href="bio.html">
-          <li>Biografi</li>
-        </a>
-        <a href="portfolio.html">
-          <li>Portfolio</li>
-        </a>
-        <a href="information.html">
-          <li>Information</li>
-        </a>
-        <a href="kontakt.html">
-          <li>Kontakt</li>
-        </a>
+        <li>
+          <a href="bio.html">Biografi</a></li>
+
+        <li>
+          <a href="portfolio.html">Portfolio</a></li>
+
+        <li>
+          <a href="information.html">Information</a></li>
+
+        <li>
+          <a href="kontakt.html">Kontakt </a></li>
+
       </ul>
     </div>
   </nav>
@@ -81,6 +81,17 @@
 
 
 <body>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img class=".modal-billede" alt="">
+    </div>
+
+  </div>
   <main id="content">
 
     <h1 class="overskrift retract">Portfolio</h1>
@@ -137,6 +148,10 @@
   <!-- JAVA -->
 
   <script>
+    //find parametre (variabler) i url'en
+    let urlParams = new URLSearchParams(window.location.search);
+    //returner værdien for variablen "id"
+    let id = urlParams.get("id");
     let billeder = []
     const liste = document.querySelector("#liste");
     const template = document.querySelector("template");
@@ -150,7 +165,7 @@
 
     async function getJson() {
 
-      const url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/tattoo";
+      const url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/tattoo?per_page=100";
       const url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
       let response1 = await fetch(url1);
       let response2 = await fetch(url2);
@@ -175,11 +190,12 @@
 
 
           clone.querySelector("article").addEventListener("click", () => {
-
+            visModal(billede)
             location.href = `portfolio.html?id=${billede.id}`;
 
+
           })
-          liste.appendChild(clone);
+          liste.appendChild(clone);;
         }
       });
     }
@@ -214,9 +230,18 @@
       document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash2.guid;
     }
+
+    function visModal(billede) {
+      document.querySelector(".modal").style.display = "block";
+      document.querySelector(".close").addEventListener("click", skjulModal);
+      document.querySelector(".modal-billede").src = billede.guid;
+    }
+
+    function skjulModal() {
+      document.querySelector(".modal").style.display = "none";
+      //window.scrollTo(0);
+    }
   </script>
-
-
   <!-- HTML SLUT -->
 
 </body>
