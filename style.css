@@ -296,7 +296,6 @@ header {
   width: 98%;
   padding: 0 1%;
   height: 130%;
-  max-width: 2000px;
   background-color: #212121;
 }
 
@@ -1365,7 +1364,6 @@ a:hover {
 
   #content {
     width: 100%;
-    max-width: 2000px;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -1524,7 +1522,6 @@ a:hover {
 
   #velkommen {
     display: block;
-    width: 100vw;
     height: 60vh;
     margin-top: 10px;
     margin-left: auto;
