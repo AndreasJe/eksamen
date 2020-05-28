@@ -15,18 +15,22 @@
 
       .pynt1 {
         display: block;
-        top: -200px;
+        top: -35vh;
         right: -150px;
-        width: 600px;
+        width: 900px;
         position: absolute;
         z-index: 999999999999999;
       }
 
-      .pynt2 {
+    }
+
+    @media screen and (min-width: 2400px) {
+
+      .pynt1 {
         display: block;
-        top: 60vh;
-        left: -200px;
-        width: 600px;
+        top: -35vh;
+        right: -150px;
+        width: 900px;
         position: absolute;
         z-index: 999999999999999;
       }
@@ -37,6 +41,10 @@
 
 </head>
 <header>
+  <div class="hmm">
+
+    <a href="#velkommen"><span></span></a>
+  </div>
 
   <nav id="burger" role="navigation_mobile">
     <div id="menuToggle">
@@ -91,9 +99,7 @@
 
   <main id="content">
 
-    <div class="largeBreaker">
-    </div>
-    <div class="velkommen">
+    <div id="velkommen">
       <img class="bg_img">
       <h1 class="overskrift"></h1>
       <p class="broedtekst"></p>
@@ -169,7 +175,6 @@
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
       document.querySelector(".pynt1").src = genereltIndhold.pyntforside1.guid;
-      document.querySelector(".pynt2").src = genereltIndhold.pyntforside2.guid;
     }
   </script>
 

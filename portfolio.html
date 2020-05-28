@@ -21,16 +21,27 @@
 
       #navigation {
         position: absolute;
-        top: 40vh;
+        top: 44vh;
         left: 2vw;
       }
 
       .retract {
         position: absolute;
-        margin-top: -30px;
+        margin-top: -150px;
         text-align: center;
         left: 50%;
         margin-left: -400px;
+      }
+
+      .splash_img {
+        object-position: 0 0;
+      }
+    }
+
+    @media screen and (min-width: 2400px) {
+
+      .splash_img {
+        object-position: 0 40%;
       }
     }
   </style>
@@ -153,6 +164,7 @@
     //returner værdien for variablen "id"
     let id = urlParams.get("id");
     let billeder
+    var modal = document.getElementById("myModal")
     const liste = document.querySelector("#liste");
     const template = document.querySelector("template");
     let filteret = "alle";
@@ -213,7 +225,7 @@
         elm.classList.remove("valgt");
       });
       this.classList.add("valgt");
-      visPortfolio(modalbillede);
+      visPortfolio();
     }
 
 
@@ -239,6 +251,11 @@
     function skjulModal() {
       document.querySelector(".modal").style.display = "none";
       //window.scrollTo(0);
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
   </script>
   <!-- HTML SLUT -->

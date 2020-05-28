@@ -21,13 +21,54 @@
 
       #navigation {
         position: absolute;
-        top: 40vh;
+        top: 44vh;
         left: 2vw;
       }
 
       .retract {
-        margin-top: -140px;
+        margin-top: -150px;
       }
+
+      .pynt2 {
+        display: block;
+        top: -200px;
+        right: -150px;
+        width: 600px;
+        position: absolute;
+        z-index: 999999999999999;
+      }
+
+      .pynt3 {
+        display: block;
+        bottom: -200vh;
+        left: -200px;
+        width: 600px;
+        position: absolute;
+        z-index: 999999999999999;
+      }
+
+    }
+
+    @media screen and (min-width: 2400px) {
+
+      .pynt2 {
+        display: block;
+        top: -200px;
+        right: -150px;
+        width: 900px;
+        position: absolute;
+        z-index: 999999999999999;
+      }
+
+      .pynt3 {
+        display: block;
+        bottom: -130vh;
+        left: -200px;
+        width: 900px;
+        position: absolute;
+        z-index: 999999999999999;
+      }
+
     }
   </style>
 
@@ -78,6 +119,17 @@
 
 
 <body>
+  <div class="pynt_container">
+
+    <img class="pynt1">
+    <img class="pynt2">
+    <img class="pynt3">
+    <img class="pynt4">
+    <img class="pynt5">
+
+  </div>
+
+
   <main id="content">
 
     <h1 class="overskrift1 retract"></h1>
@@ -176,7 +228,7 @@
         </div>
         <div class="txt_container">
           <h3 class="aft_underoverskrift1"></h3>
-          <p class="aft_tekst1"></p>
+          <p class="aft_tekst1 broedtekst"></p>
         </div>
       </div>
 
@@ -187,7 +239,7 @@
         </div>
         <div class="txt_container">
           <h3 class="aft_underoverskrift2"></h3>
-          <p class="aft_tekst2"></p>
+          <p class="aft_tekst2 broedtekst"></p>
         </div>
       </div>
 
@@ -198,7 +250,7 @@
         </div>
         <div class="txt_container">
           <h3 class="aft_underoverskrift3"></h3>
-          <p class="aft_tekst3"></p>
+          <p class="aft_tekst3 broedtekst"></p>
         </div>
       </div>
 
@@ -339,6 +391,8 @@
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash3.guid;
+      document.querySelector(".pynt2").src = genereltIndhold.pyntinfo1.guid;
+      document.querySelector(".pynt3").src = genereltIndhold.pyntinfo2.guid;
     }
 
 
