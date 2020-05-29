@@ -2,6 +2,7 @@
 <html lang="da">
 
 <head>
+  <meta name="description" content="Her finder du Adam Vechts Portfolio. Du finder min shop på Ørestads Boulevard 61, kontakt mig vedrørende udvikling af ideer og for at aftale en tid. Portfolio. Kontakt. Information. Aftercare. FAQ." />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Information | Adam Vecht</title>
@@ -88,44 +89,44 @@
 
       <ul id="menu">
         <li>
-          <a href="bio.html">Biografi</a></li>
+          <a href="bio.html" aria-label="Biografi">Biografi</a></li>
 
         <li>
-          <a href="portfolio.html">Portfolio</a></li>
+          <a href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
 
         <li>
-          <a href="information.html">Information</a></li>
+          <a href="information.html" aria-label="Information">Information</a></li>
 
         <li>
-          <a href="kontakt.html">Kontakt </a></li>
+          <a href="kontakt.html" aria-label="Kontakt">Kontakt </a></li>
 
       </ul>
     </div>
   </nav>
 
   <nav id="mainNAV">
-    <a href="index.html">
-      <img class="logo_img"></a>
+    <a href="index.html" aria-label="Tilbage til forsiden">
+      <img class="logo_img" alt="Logo med A og V opstillet - udgør Adam Vecht Tattoo"></a>
     <div class="colwrapper" id="navigation">
-      <a href="bio.html">Biografi</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="information.html">Information</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="bio.html" aria-label="Biografi">Biografi</a>
+      <a href="portfolio.html" aria-label="Portfolio">Portfolio</a>
+      <a href="information.html" aria-label="Information">Information</a>
+      <a href="kontakt.html" aria-label="Kontakt">Kontakt</a>
     </div>
-    <img class="splash_img">
-
+    <img class="splash_img" alt="Billede af Adam under arbejde med en tatovering">
   </nav>
 </header>
+
 
 
 <body>
   <div class="pynt_container">
 
-    <img class="pynt1">
-    <img class="pynt2">
-    <img class="pynt3">
-    <img class="pynt4">
-    <img class="pynt5">
+    <img class="pynt1" alt="Stregtegning af tatovering">
+    <img class="pynt2" alt="Stregtegning af tatovering">
+    <img class="pynt3" alt="Stregtegning af tatovering">
+    <img class="pynt4" alt="Stregtegning af tatovering">
+    <img class="pynt5" alt="Stregtegning af tatovering">
 
   </div>
 
@@ -224,7 +225,7 @@
 
       <div class="section1 rowwrapper">
         <div class="img_container">
-          <img class="aft_img1">
+          <img class="aft_img1" alt="Temp">
         </div>
         <div class="txt_container">
           <h3 class="aft_underoverskrift1"></h3>
@@ -235,7 +236,7 @@
 
       <div class="section2 rev_rowwrapper">
         <div class="img_container">
-          <img class="aft_img2">
+          <img class="aft_img2" alt="Temp">
         </div>
         <div class="txt_container">
           <h3 class="aft_underoverskrift2"></h3>
@@ -246,7 +247,7 @@
 
       <div class="section3 rowwrapper">
         <div class="img_container">
-          <img class="aft_img3">
+          <img class="aft_img3" alt="Temp">
         </div>
         <div class="txt_container">
           <h3 class="aft_underoverskrift3"></h3>
@@ -261,7 +262,7 @@
   </main>
   <footer>
     <h3 class="navn"></h3>
-    <img class="btm_logo_img">
+    <img class="btm_logo_img" alt="Logo med A og V opstillet - udgør Adam Vecht Tattoo">
 
     <div class="wrapper">
 
@@ -269,153 +270,152 @@
       <p class="telefon"></p>
       <p class="email"></p>
     </div>
-    <div class="smallBreaker">
-    </div>
   </footer>
 
 
 
   <div class="fixed_some">
     <div class="rowwrapper">
-      <a href="https://www.instagram.com/tattoosbyadamv"><img class="instagram_ikon"></a>
+      <div class="rowwrapper">
+        <a href="https://www.instagram.com/tattoosbyadamv" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
 
-      <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/"><img class="facebook_ikon"></a>
+        <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
+      </div>
     </div>
-  </div>
 
 
-  <!-- JAVA -->
+    <!-- JAVA -->
 
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", start)
+    <script>
+      document.addEventListener("DOMContentLoaded", start)
 
 
-    let information
-    let betaling
-    let goderaad
-    let genereltIndhold
-    let aftercare
+      let information
+      let betaling
+      let goderaad
+      let genereltIndhold
+      let aftercare
 
-    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/info/747";
-    let url2 = "http://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
-    let url3 = "http://adam.duedrengen.dk/wp-json/wp/v2/info/749";
-    let url4 = "http://adam.duedrengen.dk/wp-json/wp/v2/info/750";
-    let url5 = "http://adam.duedrengen.dk/wp-json/wp/v2/info/748";
+      let url1 = "https://adam.duedrengen.dk/wp-json/wp/v2/info/747";
+      let url2 = "https://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+      let url3 = "https://adam.duedrengen.dk/wp-json/wp/v2/info/749";
+      let url4 = "https://adam.duedrengen.dk/wp-json/wp/v2/info/750";
+      let url5 = "https://adam.duedrengen.dk/wp-json/wp/v2/info/748";
 
-    async function start() {
-      let response1 = await fetch(url1);
-      let response2 = await fetch(url2);
-      let response3 = await fetch(url3);
-      let response4 = await fetch(url4);
-      let response5 = await fetch(url5);
+      async function start() {
+        let response1 = await fetch(url1);
+        let response2 = await fetch(url2);
+        let response3 = await fetch(url3);
+        let response4 = await fetch(url4);
+        let response5 = await fetch(url5);
 
-      information = await response1.json();
-      genereltIndhold = await response2.json();
-      goderaad = await response3.json();
-      aftercare = await response4.json();
-      betaling = await response5.json();
+        information = await response1.json();
+        genereltIndhold = await response2.json();
+        goderaad = await response3.json();
+        aftercare = await response4.json();
+        betaling = await response5.json();
 
-      visInformation();
-      visBetaling();
-      visGodeRaad();
-      visAftercare();
-      visEventlisteners();
-      visGenereltIndhold();
-    }
-
-
-    function visInformation() {
-      console.log("Henter information...")
-      document.querySelector(".overskrift1").textContent = information.overskrift;
-      document.querySelector(".underoverskrift").textContent = information.underoverskrift;
-      document.querySelector(".broedtekst").innerHTML = information.tekst;
-    }
-
-
-    function visBetaling() {
-      console.log("Henter FAQ kategori - Booking og Betaling..")
-      document.querySelector(".overskrift2").textContent = betaling.overskrift;
-      document.querySelector(".btl_spoergsmaal1").textContent = betaling.spg1;
-      document.querySelector(".btl_svar1").textContent = betaling.svar1;
-      document.querySelector(".btl_spoergsmaal2").textContent = betaling.spg2;
-      document.querySelector(".btl_svar2").textContent = betaling.svar2;
-      document.querySelector(".btl_spoergsmaal3").textContent = betaling.spg3;
-      document.querySelector(".btl_svar3").textContent = betaling.svar3;
-      document.querySelector(".btl_spoergsmaal4").textContent = betaling.spg4;
-      document.querySelector(".btl_svar4").textContent = betaling.svar4;
-      document.querySelector(".btl_spoergsmaal5").textContent = betaling.spg5;
-      document.querySelector(".btl_svar5").textContent = betaling.svar5;
-    }
-
-
-    function visGodeRaad() {
-      console.log("Henter FAQ kategori - Gode Raad Foer Tatovering...")
-      document.querySelector(".overskrift3").textContent = goderaad.overskrift;
-      document.querySelector(".raad_spoergsmaal1").textContent = goderaad.spg1;
-      document.querySelector(".raad_svar1").textContent = goderaad.svar1;
-      document.querySelector(".raad_spoergsmaal2").textContent = goderaad.spg2;
-      document.querySelector(".raad_svar2").textContent = goderaad.svar2;
-      document.querySelector(".raad_spoergsmaal3").textContent = goderaad.spg3;
-      document.querySelector(".raad_svar3").textContent = goderaad.svar3;
-      document.querySelector(".raad_spoergsmaal4").textContent = goderaad.spg4;
-      document.querySelector(".raad_svar4").textContent = goderaad.svar4;
-      // document.querySelector(".raad_spørgsmaal5").textContent = goderaad.spg5;
-      // document.querySelector(".raad_svar5").textContent = goderaad.svar5;
-    }
-
-
-    function visAftercare() {
-      console.log("Henter Aftercare sektion...")
-      document.querySelector(".overskrift4").textContent = aftercare.overskrift;
-      document.querySelector(".aft_img1").src = aftercare.aftercare_billede1.guid;
-      document.querySelector(".aft_img2").src = aftercare.aftercare_billede2.guid;
-      document.querySelector(".aft_img3").src = aftercare.aftercare_billede3.guid;
-      document.querySelector(".aft_tekst1").textContent = aftercare.aftercare_tekst1;
-      document.querySelector(".aft_tekst2").textContent = aftercare.aftercare_tekst2;
-      document.querySelector(".aft_tekst3").textContent = aftercare.aftercare_tekst3;
-      document.querySelector(".aft_underoverskrift1").textContent = aftercare.aftercare_underoverskrift1;
-      document.querySelector(".aft_underoverskrift2").textContent = aftercare.aftercare_underoverskrift2;
-      document.querySelector(".aft_underoverskrift3").textContent = aftercare.aftercare_underoverskrift3;
-    }
-
-    function visGenereltIndhold() {
-      console.log("Henter generelt indhold...")
-      document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
-      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
-      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
-      document.querySelector(".email").textContent = genereltIndhold.email;
-      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
-      document.querySelector(".navn").textContent = genereltIndhold.navn;
-      document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
-      document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
-      document.querySelector(".splash_img").src = genereltIndhold.splash3.guid;
-      document.querySelector(".pynt2").src = genereltIndhold.pyntinfo1.guid;
-      document.querySelector(".pynt3").src = genereltIndhold.pyntinfo2.guid;
-    }
-
-
-    function visEventlisteners() {
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
+        visInformation();
+        visBetaling();
+        visGodeRaad();
+        visAftercare();
+        visEventlisteners();
+        visGenereltIndhold();
       }
-    }
-  </script>
 
 
-  <!-- HTML SLUT -->
+      function visInformation() {
+        console.log("Henter information...")
+        document.querySelector(".overskrift1").textContent = information.overskrift;
+        document.querySelector(".underoverskrift").textContent = information.underoverskrift;
+        document.querySelector(".broedtekst").innerHTML = information.tekst;
+      }
+
+
+      function visBetaling() {
+        console.log("Henter FAQ kategori - Booking og Betaling..")
+        document.querySelector(".overskrift2").textContent = betaling.overskrift;
+        document.querySelector(".btl_spoergsmaal1").textContent = betaling.spg1;
+        document.querySelector(".btl_svar1").textContent = betaling.svar1;
+        document.querySelector(".btl_spoergsmaal2").textContent = betaling.spg2;
+        document.querySelector(".btl_svar2").textContent = betaling.svar2;
+        document.querySelector(".btl_spoergsmaal3").textContent = betaling.spg3;
+        document.querySelector(".btl_svar3").textContent = betaling.svar3;
+        document.querySelector(".btl_spoergsmaal4").textContent = betaling.spg4;
+        document.querySelector(".btl_svar4").textContent = betaling.svar4;
+        document.querySelector(".btl_spoergsmaal5").textContent = betaling.spg5;
+        document.querySelector(".btl_svar5").textContent = betaling.svar5;
+      }
+
+
+      function visGodeRaad() {
+        console.log("Henter FAQ kategori - Gode Raad Foer Tatovering...")
+        document.querySelector(".overskrift3").textContent = goderaad.overskrift;
+        document.querySelector(".raad_spoergsmaal1").textContent = goderaad.spg1;
+        document.querySelector(".raad_svar1").textContent = goderaad.svar1;
+        document.querySelector(".raad_spoergsmaal2").textContent = goderaad.spg2;
+        document.querySelector(".raad_svar2").textContent = goderaad.svar2;
+        document.querySelector(".raad_spoergsmaal3").textContent = goderaad.spg3;
+        document.querySelector(".raad_svar3").textContent = goderaad.svar3;
+        document.querySelector(".raad_spoergsmaal4").textContent = goderaad.spg4;
+        document.querySelector(".raad_svar4").textContent = goderaad.svar4;
+        // document.querySelector(".raad_spørgsmaal5").textContent = goderaad.spg5;
+        // document.querySelector(".raad_svar5").textContent = goderaad.svar5;
+      }
+
+
+      function visAftercare() {
+        console.log("Henter Aftercare sektion...")
+        document.querySelector(".overskrift4").textContent = aftercare.overskrift;
+        document.querySelector(".aft_img1").src = aftercare.aftercare_billede1.guid;
+        document.querySelector(".aft_img2").src = aftercare.aftercare_billede2.guid;
+        document.querySelector(".aft_img3").src = aftercare.aftercare_billede3.guid;
+        document.querySelector(".aft_tekst1").textContent = aftercare.aftercare_tekst1;
+        document.querySelector(".aft_tekst2").textContent = aftercare.aftercare_tekst2;
+        document.querySelector(".aft_tekst3").textContent = aftercare.aftercare_tekst3;
+        document.querySelector(".aft_underoverskrift1").textContent = aftercare.aftercare_underoverskrift1;
+        document.querySelector(".aft_underoverskrift2").textContent = aftercare.aftercare_underoverskrift2;
+        document.querySelector(".aft_underoverskrift3").textContent = aftercare.aftercare_underoverskrift3;
+      }
+
+      function visGenereltIndhold() {
+        console.log("Henter generelt indhold...")
+        document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
+        document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
+        document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+        document.querySelector(".email").textContent = genereltIndhold.email;
+        document.querySelector(".telefon").textContent = genereltIndhold.tlf;
+        document.querySelector(".navn").textContent = genereltIndhold.navn;
+        document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
+        document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
+        document.querySelector(".splash_img").src = genereltIndhold.splash3.guid;
+        document.querySelector(".pynt2").src = genereltIndhold.pyntinfo1.guid;
+        document.querySelector(".pynt3").src = genereltIndhold.pyntinfo2.guid;
+      }
+
+
+      function visEventlisteners() {
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+      }
+    </script>
+
+
+    <!-- HTML SLUT -->
 
 </body>
 
