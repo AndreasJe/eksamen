@@ -57,7 +57,7 @@ header {
   display: none;
   position: fixed;
   z-index: 9999999999999;
-  padding-top: 100px;
+  padding-top: 5%;
   left: 0;
   top: 0;
   width: 100vw;
@@ -243,30 +243,35 @@ header {
 }
 
 .aft_img1 {
-  position: absolute;
+  display: none;
+  /*  position: absolute;
   height: 150px;
   width: 150px;
   right: 0;
   top: 30%;
-  z-index: 4;
+  z-index: 4;*/
 }
 
 .aft_img2 {
+  display: none;
+  /*
   position: absolute;
   height: 150px;
   width: 150px;
   left: 0;
   top: 60%;
-  z-index: 0;
+  z-index: 0;*/
 }
 
 .aft_img3 {
+  display: none;
+  /*
   position: absolute;
   height: 150px;
   width: 150px;
   right: -10%;
   top: 90%;
-  z-index: 0;
+  z-index: 0;*/
 }
 
 .venstre {
@@ -374,18 +379,16 @@ footer {
 
 /* //Sektioner fra Aftercare  */
 .section1 {
-  margin-top: 10vh;
   z-index: 99;
 }
 
 .section2 {
-  margin-top: 10vh;
   z-index: 99;
 }
 
 .section3 {
-  margin-top: 10vh;
   z-index: 99;
+  margin-bottom: 200px;
 }
 
 /* //Loopview  */
