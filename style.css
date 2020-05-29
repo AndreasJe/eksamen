@@ -368,6 +368,7 @@
     background-color: #191818;
     text-align: center;
     height: auto;
+    min-height: 100%;
   }
 
   .aftercare {
@@ -529,7 +530,7 @@
 
   /* //Tekst klasser */
   h1 {
-    width: 300px;
+    width: 100%;
     font-size: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -824,7 +825,7 @@
   }
 
   /* -----------------TABLET styling-------------- */
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 600px) {
 
     /* ---------SKJUL KLASSER--------- */
     .video-container {
@@ -866,7 +867,7 @@
 
     /* ---------KONTAKT FORMULAR--------- */
     .kontakt_form {
-      width: 80vw;
+      width: 60vw;
       margin-top: 2vh;
       overflow: hidden;
     }
@@ -974,6 +975,7 @@
 
     .broedtekst {
       width: 60%;
+      height: auto;
       margin-left: auto;
       margin-right: auto;
     }
