@@ -441,16 +441,17 @@
   }
 
   .filter {
-    opacity: 60%;
     text-align: center;
     word-break: normal;
     padding: 10px;
-    width: 150px;
-    Height: 60px;
+    min-width: 150px;
+    max-width: 300px;
+    width: 25vw;
+    Height: 100px;
     color: #FFF;
-    background-color: #585858;
-    font-family: 'Lane - Narrow';
-    font-size: 1rem;
+    background-color: #212121;
+    font-family: 'BaseOneReg';
+    font-size: 1.5rem;
     box-shadow: 0px 0px 0px transparent;
     border: 2px solid white;
     text-shadow: 0px 0px 0px transparent;
@@ -546,6 +547,7 @@
 
   .retract {
     z-index: 99999;
+    margin-top: 15vh;
   }
 
   h2 {
@@ -622,6 +624,20 @@
     cursor: pointer;
     color: #FFF;
     border: white 1px solid;
+    background-color: #212121;
+  }
+
+  .tiltop_btn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: #FFF;
+    border: white 1px solid;
+    background-color: #212121;
   }
 
   .follow_btn {
@@ -798,7 +814,6 @@
     object-fit: cover;
     z-index: -1;
     opacity: 20%;
-    filter: grayscale(100%);
   }
 
   /* ---------SKJUL KLASSER--------- */
@@ -827,7 +842,11 @@
   }
 
   .splash_img {
-    display: none;
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    display: block;
+    z-index: 99;
   }
 
   /* -----------------TABLET styling-------------- */
@@ -925,21 +944,17 @@
       padding: 0 5vw;
     }
 
-    .betaling {
-      padding: 0 5vw;
-    }
-
-    .raad {
-      padding: 0 5vw;
-    }
-
-    .information {
-      padding: 0 5vw;
-    }
-
     .kontakt_formular {
       padding: 0 5vw;
       padding-top: 0;
+    }
+
+    .information {
+      width: 100%;
+    }
+
+    .txt_container {
+      width: 100%;
     }
 
     /* //Tekst klasser */
@@ -966,6 +981,11 @@
       margin-top: 50px;
     }
 
+    .retract {
+      z-index: 99999;
+      margin-top: 25vh;
+    }
+
     .panel {
       width: 80%;
     }
@@ -984,7 +1004,7 @@
     }
 
     .broedtekst {
-      width: 60%;
+      width: 80%;
       height: auto;
       margin-left: auto;
       margin-right: auto;
@@ -1026,19 +1046,19 @@
     }
 
     .aft_tekst1 {
-      width: 60%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
 
     .aft_tekst2 {
-      width: 60%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
 
     .aft_tekst3 {
-      width: 60%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1148,7 +1168,7 @@
     }
 
     .splash_img {
-      display: none;
+      height: 30vh;
     }
 
     .venstre {
@@ -1289,6 +1309,7 @@
       text-align: center;
       left: 50%;
       margin-left: -400px;
+      z-index: 9999999999999999999999999;
     }
 
     h2 {
@@ -1423,11 +1444,16 @@
       width: 18vw;
       Height: 60px;
       color: #FFF;
-      background-color: #585858;
-      font-family: 'Lane - Narrow';
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
+      text-decoration: underline;
+      padding: 10px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      border: white 1px solid;
+      font-family: 'BaseOneReg';
     }
 
     .logo_img {
@@ -1478,7 +1504,6 @@
       opacity: 0;
       z-index: 9999999999999999999;
       color: #fff;
-      fill: currentColor;
     }
 
     @keyframes fade-slide-up {
