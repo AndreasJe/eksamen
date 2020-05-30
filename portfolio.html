@@ -253,20 +253,6 @@
       visPortfolio();
     }
 
-
-    function visGenereltIndhold() {
-      console.log("Henter generelt indhold...")
-      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
-      document.querySelector(".email").textContent = genereltIndhold.email;
-      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
-      document.querySelector(".navn").textContent = genereltIndhold.navn;
-      document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
-      document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
-      document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
-      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
-      document.querySelector(".splash_img").src = genereltIndhold.splash2.guid;
-    }
-
     function visModal(billede) {
       document.querySelector(".modal").style.display = "block";
       document.querySelector(".close").addEventListener("click", skjulModal);
@@ -282,6 +268,19 @@
       if (event.target == modal) {
         modal.style.display = "none";
       }
+    }
+
+    function visGenereltIndhold() {
+      console.log("Henter generelt indhold...")
+      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
+      document.querySelector(".email").textContent = genereltIndhold.email;
+      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
+      document.querySelector(".navn").textContent = genereltIndhold.navn;
+      document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
+      document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
+      document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
+      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
+      document.querySelector(".splash_img").src = genereltIndhold.splash2.guid;
     }
   </script>
   <!-- HTML SLUT -->

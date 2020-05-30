@@ -403,7 +403,7 @@
     display: grid;
     grid-template-columns: 80vw;
     /* //GRID PÅ MOBIL - FYLDER */
-    grid-gap: 10px;
+    grid-gap: 5vh;
     /* //GRID MELLEMRUM */
     margin-left: auto;
     /* //CENTRERING AF GRID */
@@ -421,7 +421,7 @@
 
   /* //HVERT ENKELT BILLEDES CONTAINER */
   .oplaeg_img {
-    height: 350px;
+    height: 100%;
     /* //BILLEDETS HØJDE I GRIDDET */
     width: 100%;
     object-fit: cover;
@@ -1136,7 +1136,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       /* //GRID */
-      grid-gap: 10px;
+      grid-gap: 1vh;
       /* //GRID MELLEMRUM */
       margin-left: auto;
       /* //CENTRERING AF GRID */
@@ -1145,11 +1145,8 @@
     }
 
     .oplaeg_img {
-      /* SKYGGE */
-      height: 30vh;
-      /* HØJDE - TABLET */
+      height: 80%;
       width: 100%;
-      /* BREDDE - TABLET */
       border: 10px black solid;
     }
 
@@ -1372,7 +1369,7 @@
       text-align: center;
       left: 50%;
       margin-left: -400px;
-      z-index: 9999999999999999999999999;
+      z-index: 99999999;
     }
 
     h2 {
@@ -1556,6 +1553,7 @@
       padding-top: 10%;
       background-color: rgba(250, 250, 250, 1);
       margin: auto;
+      z-index: 999999999999999999999999;
     }
 
     .close {
