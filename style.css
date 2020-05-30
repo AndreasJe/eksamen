@@ -459,19 +459,19 @@
 
   /* //Kontakt formular  */
   .kontakt_navn {
-    width: 100%;
+    width: 90%;
     background-color: #585858;
     margin-top: 2vh;
   }
 
   .kontakt_email {
-    width: 100%;
+    width: 90%;
     background-color: #585858;
     margin-top: 2vh;
   }
 
   .kontakt_tlf {
-    width: 100%;
+    width: 90%;
     background-color: #585858;
     margin-top: 2vh;
   }
@@ -547,7 +547,7 @@
 
   .retract {
     z-index: 99999;
-    margin-top: 15vh;
+    margin-top: 25vh;
   }
 
   h2 {
@@ -843,7 +843,7 @@
 
   .splash_img {
     width: 100%;
-    height: 20vh;
+    height: 40vh;
     object-fit: cover;
     display: block;
     z-index: 99;
@@ -950,11 +950,15 @@
     }
 
     .information {
-      width: 100%;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .txt_container {
-      width: 100%;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* //Tekst klasser */
@@ -1168,7 +1172,7 @@
     }
 
     .splash_img {
-      height: 30vh;
+      height: 45vh;
     }
 
     .venstre {
@@ -1564,7 +1568,10 @@
     .oplaeg_img {
       box-shadow: 0px 0px 0px 10px #191818;
       height: 600px;
-      width: 80%;
+      width: 100%;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     .insta {
