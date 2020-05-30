@@ -473,19 +473,19 @@
 
   /* //Kontakt formular  */
   .kontakt_navn {
-    width: 90%;
+    width: 100%;
     background-color: #585858;
     margin-top: 2vh;
   }
 
   .kontakt_email {
-    width: 90%;
+    width: 100%;
     background-color: #585858;
     margin-top: 2vh;
   }
 
   .kontakt_tlf {
-    width: 90%;
+    width: 100%;
     background-color: #585858;
     margin-top: 2vh;
   }
