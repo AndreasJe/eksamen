@@ -1331,8 +1331,21 @@
     }
 
     .oplaeg_img {
-      min-height: 500px;
+      height: 500px;
       width: 100%;
+    }
+
+    article {
+      height: 600px;
+    }
+
+    .oplaeg_img:hover {
+      /* SKYGGE */
+      height: 550px;
+      transition: 0.5s;
+      /* HØJDE - TABLET */
+      width: 100%;
+      /* BREDDE - TABLET */
     }
 
     .galleri_nav {
@@ -1628,6 +1641,20 @@
       display: block;
       margin-right: auto;
       margin-left: auto;
+      height: 600px;
+    }
+
+    article {
+      height: 700px;
+    }
+
+    .oplaeg_img:hover {
+      /* SKYGGE */
+      height: 650px;
+      transition: 0.5s;
+      /* HØJDE - TABLET */
+      width: 100%;
+      /* BREDDE - TABLET */
     }
 
     .insta {
