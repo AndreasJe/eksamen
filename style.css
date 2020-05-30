@@ -395,66 +395,80 @@
     margin-bottom: 200px;
   }
 
-  /* //Loopview  */
+  /* //---------------------LOOPVIEW - MOBIL ------------------*/
+  /* //LOOPVIEW CONTAINER */
   #liste {
     max-width: 80vw;
+    /* //MATCHER BILLEDETS STØRRELSE, DA VI HAR ET BILLEDE AF GANGEN PÅ MOBIL*/
     display: grid;
     grid-template-columns: 80vw;
+    /* //GRID PÅ MOBIL - FYLDER */
     grid-gap: 10px;
+    /* //GRID MELLEMRUM */
     margin-left: auto;
+    /* //CENTRERING AF GRID */
     margin-right: auto;
+    /* //CENTRERING AF GRID */
     place-items: center;
+    /* //CENTRERING AF GRID ELEMENTER */
   }
 
+  /* //HVERT ENKELT BILLEDES CONTAINER */
   article {
     width: 80%;
+    height: 40vh;
   }
 
+  /* //HVERT ENKELT BILLEDES CONTAINER */
   .oplaeg_img {
-    box-shadow: 0px 0px 0px 10px #191818;
     height: 350px;
+    /* //BILLEDETS HØJDE I GRIDDET */
     width: 100%;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
     object-fit: cover;
+    /* // SØRGER FOR BILLEDET FYLDER SIN CONTAINER UD */
+    object-position: center;
     margin-left: auto;
     margin-right: auto;
   }
 
+  /* //VALGTE KATEGORI - HIGHLIGHT*/
   .valgt {
     background-color: #585858;
   }
 
-  /* //Knapper til filtrering  */
+  /* //CONTAINER TIL KNAPPER I FILTRERING - FLEX WRAP TIL MOBIL OG TABLET  */
   .galleri_nav {
     height: auto;
+    /* //HØJDEN TILPASSER SIG TEKSTEN*/
     display: flex;
     flex-direction: row;
+    /* //FLEXER TO KNAP-GRUPPER - SIDE OM SIDE*/
     flex-wrap: wrap;
     flex-basis: 250px;
+    /* //BREDDEN*/
+    margin-bottom: 5vh;
   }
 
-  .knapper {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+  /* //CONTAINER TIL KNAPPER I FILTRERING - FLEX WRAP TIL MOBIL OG TABLET  */
   .filter {
     text-align: center;
+    /* //CENTERING AF KNAPPENS TEKST*/
     word-break: normal;
+    /* //SØRGER FOR AT TEKSTEN LINJESKIFTER KORREKT I "BLACK AND GREY REALISM"*/
     padding: 10px;
     min-width: 150px;
+    /* // SØRGER FOR AT TEKSTEN KAN VÆRE DER ALTID*/
     max-width: 300px;
+    /* // SØRGER FOR AT KNAPPERNE IKKE BLIVER FOR STORE*/
     width: 25vw;
+    /* // KNAPPENS UDGANGSPUNKT*/
     Height: 100px;
+    /* // KNAPPENS HØJDE*/
     color: #FFF;
     background-color: #212121;
     font-family: 'BaseOneReg';
     font-size: 1.5rem;
-    box-shadow: 0px 0px 0px transparent;
     border: 2px solid white;
-    text-shadow: 0px 0px 0px transparent;
   }
 
   /* //Kontakt formular  */
@@ -533,7 +547,8 @@
     margin-bottom: 2vh;
   }
 
-  /* //Tekst klasser */
+  /* //------------------------ GENERELLE TEKST KLASSER --------------------*/
+  /* //OVERSKRIFTER */
   h1 {
     width: 100%;
     font-size: 2rem;
@@ -541,15 +556,19 @@
     margin-right: auto;
     text-align: center;
     margin-bottom: 4px;
+    /* //SIKRER AT OVERSKRIFTEN IKKE STÅR FOR HØJT */
     margin-top: 100px;
+    /* //SIKRER AT OVERSKRIFTEN HAR AFSTED TIL TIDLIGERE SEKTION */
     font-family: 'BaseOneReg';
   }
 
+  /* //TRÆKKER OVERSKRIFTEN OP TIL SPLASH PÅ UNDERSIDER */
   .retract {
     z-index: 99999;
     margin-top: 25vh;
   }
 
+  /* //UNDEROVERSKRIFTER */
   h2 {
     width: 300px;
     font-size: 1.2rem;
@@ -559,6 +578,7 @@
     font-family: 'BaseOneReg';
   }
 
+  /* //KNAPPER */
   h3 {
     width: 80%;
     font-size: 1.2rem;
@@ -570,6 +590,7 @@
     font-family: 'BaseOneReg';
   }
 
+  /* //BRØDTEKST */
   p {
     width: 80%;
     margin-top: 0;
@@ -614,6 +635,7 @@
     margin-right: auto;
   }
 
+  /* KNAPPER */
   .insta_btn {
     margin-left: auto;
     margin-right: auto;
@@ -625,6 +647,12 @@
     color: #FFF;
     border: white 1px solid;
     background-color: #212121;
+    font-size: 1.3rem;
+  }
+
+  .insta_btn:hover {
+    border: white 3px solid;
+    font-size: 1.4rem;
   }
 
   .tiltop_btn {
@@ -638,16 +666,12 @@
     color: #FFF;
     border: white 1px solid;
     background-color: #212121;
+    font-size: 1.3rem;
   }
 
-  .follow_btn {
-    background-color: #212121;
-    color: #585858;
-    font-size: 1.2rem;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  .tiltop_btn:hover {
+    border: white 3px solid;
+    font-size: 1.4rem;
   }
 
   /* //FAQ klasser fra https://www.w3schools.com/howto/howto_js_accordion.asp*/
@@ -707,15 +731,15 @@
     font-family: 'BaseOneReg';
   }
 
-  a:hover {
-    font-size: 120%;
+  #navigation a:hover {
+    font-weight: bolder;
   }
 
   #menuToggle {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 40px;
+    right: 40px;
     z-index: 50;
     -webkit-user-select: none;
     user-select: none;
@@ -724,7 +748,7 @@
   #menuToggle input {
     display: block;
     width: 40px;
-    height: 32px;
+    height: 40px;
     position: absolute;
     top: -7px;
     left: -5px;
@@ -740,7 +764,7 @@
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #FFF;
     border-radius: 3px;
     z-index: 50;
     transform-origin: 4px 0px;
@@ -779,7 +803,7 @@
     margin: -100px 0 0 0;
     padding: 50px;
     padding-top: 125px;
-    right: -100px;
+    right: -150px;
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -1105,20 +1129,37 @@
       z-index: 0;
     }
 
-    /* //Loopview  */
+    /* -------------//Loopview - TABLET STYLING -------------------*/
+    /* //LOOPVIEWETS CONTAINER - TABLET */
     #liste {
       max-width: 80vw;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      /* //GRID */
       grid-gap: 10px;
+      /* //GRID MELLEMRUM */
       margin-left: auto;
+      /* //CENTRERING AF GRID */
       margin-right: auto;
+      /* //CENTRERING AF GRID */
     }
 
     .oplaeg_img {
-      box-shadow: 0px 0px 0px 10px #191818;
+      /* SKYGGE */
       height: 30vh;
+      /* HØJDE - TABLET */
       width: 100%;
+      /* BREDDE - TABLET */
+      border: 10px black solid;
+    }
+
+    .oplaeg_img:hover {
+      /* SKYGGE */
+      height: 32vh;
+      transition: 0.5s;
+      /* HØJDE - TABLET */
+      width: 100%;
+      /* BREDDE - TABLET */
     }
 
     .bio_img {
@@ -1205,6 +1246,10 @@
       display: block;
     }
 
+    #navigation a:hover {
+      font-size: 3.2rem;
+    }
+
     .splash_img {
       object-fit: cover;
       object-position: center;
@@ -1258,7 +1303,8 @@
     #navigation {
       position: absolute;
       top: 70vh;
-      left: 1vw;
+      left: -3vw;
+      width: 200px;
       visibility: visible;
       text-align: center;
     }
@@ -1285,7 +1331,6 @@
     }
 
     .oplaeg_img {
-      box-shadow: 0px 0px 0px 10px #191818;
       min-height: 500px;
       width: 100%;
     }
@@ -1415,6 +1460,7 @@
 
     #navigation {
       z-index: 9;
+      width: 350px;
     }
 
     .accordion {
@@ -1423,7 +1469,11 @@
       background-color: #585858;
       color: #C8C8C8;
       cursor: pointer;
-      width: 60%;
+      width: 50%;
+    }
+
+    .panel {
+      width: 50%;
     }
 
     header {
@@ -1459,6 +1509,12 @@
       cursor: pointer;
       border: white 1px solid;
       font-family: 'BaseOneReg';
+    }
+
+    .filter:hover {
+      width: 25vw;
+      font-size: 1.6rem;
+      border: white 3px solid;
     }
 
     .logo_img {
@@ -1567,7 +1623,6 @@
     }
 
     .oplaeg_img {
-      box-shadow: 0px 0px 0px 10px #191818;
       height: 600px;
       width: 100%;
       display: block;
@@ -1611,5 +1666,9 @@
 
     #navigation a {
       font-size: 4rem;
+    }
+
+    #navigation a:hover {
+      font-size: 4.2rem;
     }
   }

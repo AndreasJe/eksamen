@@ -25,7 +25,7 @@
       #navigation {
         position: absolute;
         top: 35vh;
-        left: 2vw;
+        left: -3vw;
         font-size: 3rem;
       }
 
@@ -50,6 +50,7 @@
 
       #navigation {
         top: 35vh;
+        left: 0vw;
       }
     }
   </style>
@@ -100,40 +101,50 @@
 <body>
 
 
-  <!-- The Modal -->
+  <!-- POPUP CONTAINER -->
   <div id="myModal" class="modal">
 
-    <!-- Modal content -->
+    <!-- POPUP CONTENT -->
     <div class="modal-content">
+      <!-- lUK KNAP TIL POPUP -->
       <span class="close">&times;</span>
+      <!-- BILLEDET I POPUP'EN. -->
       <img id="modal_img" alt="Tatovering af Adam Vecht">
     </div>
 
   </div>
+  <!-- MAIN CONTENT -->
   <main id="content">
 
+    <!-- OVERSKRIFT -->
     <h1 class="overskrift retract">Portfolio</h1>
+    <!-- CONTAINER TIL FILTRERINGS KNAPPER -->
     <div class="galleri_nav">
 
+      <!-- MAIN WRAPPER TIL FILTRERINGS KNAPPER -->
       <div class="rowwrapper knapper">
+        <!-- WRAPPER TIL DE TO SÆT AF KNAPPER -->
         <div class="wrapper">
+          <!-- KNAPPER MED TILEGNET DATA-SET - SKABER FORBINDELSEN TIL LOOPVIEWET -->
           <button class="filter" data-kategorier="traditional">TRADITIONAL</button>
           <button class="filter" data-kategorier="japanese">JAPANSK</button></div>
+        <!-- WRAPPER TIL DE TO SÆT AF KNAPPER -->
         <div class="wrapper">
+          <!-- KNAPPER MED TILEGNET DATA-SET - SKABER FORBINDELSEN TIL LOOPVIEWET -->
           <button class="filter" data-kategorier="black and grey realism">BLACK & GREY REALISM</button>
           <button class="filter" data-kategorier="andet">ANDET</button></div>
-
       </div>
-
-
-
-
     </div>
+
+    <!-- SEKTIONS CONTAINER -->
     <div class="galleri">
+      <!-- CONTAINER TIL LOOPVIEW -->
       <section id="liste"></section>
 
+      <!-- TEMPLATES TIL ENKELTE BILLEDER I LOOPVIEW -->
       <template>
         <article>
+          <!-- FORUDBESTEMT ALT SOM TEMPLATE -->
           <img class="oplaeg_img" alt="Tatovering af Adam Vecht">
         </article>
       </template>
