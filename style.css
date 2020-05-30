@@ -1432,7 +1432,7 @@
 
     .logo_img {
       position: absolute;
-      width: 350px;
+      width: 250px;
       left: 2vh;
       top: 1vh;
       z-index: 9;
@@ -1554,6 +1554,7 @@
     .close {
       right: 33vw;
       height: 0px;
+      color: black;
     }
 
     footer .wrapper {
