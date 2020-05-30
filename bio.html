@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bio | Adam Vecht</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://adam.duedrengen.dk">
   <style media="screen">
     @media screen and (min-width: 1200px) {
       .splash_img {
@@ -23,12 +24,22 @@
 
       #navigation {
         position: absolute;
-        top: 44vh;
+        top: 35vh;
         left: 2vw;
+        font-size: 3rem;
       }
 
       .retract {
         margin-top: -150px;
+      }
+    }
+
+
+    @media screen and (min-width: 2400px) {
+
+
+      #navigation {
+        top: 35vh;
       }
     }
   </style>
@@ -101,33 +112,36 @@
           <img class="hoejre">
         </div>
       </div>
-
-      <div class="btn" onclick="window.location.href='https://www.instagram.com/tattoosbyadamv/'" aria-label="Knap til Instagram">
+      <a href="https://www.instagram.com/tattoosbyadamv/" class="btn" target="_blank" aria-label="Knap til Instagram">
         <h2 class="insta_btn"></h2>
 
-      </div>
+      </a>
+
     </div>
-
-    <footer>
-      <h3 class="navn"></h3>
-      <img class="btm_logo_img" alt="Logo med A og V opstillet - udgør Adam Vecht Tattoo">
-      <div class="wrapper">
-
-        <p class="adresse"></p>
-        <p class="telefon"></p>
-        <p class="email"></p>
-      </div>
-    </footer>
-
-
-    <div class="fixed_some">
-      <div class="rowwrapper">
-        <a href="https://www.instagram.com/tattoosbyadamv" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
-
-        <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
-      </div>
     </div>
   </main>
+
+  <footer>
+    <h3 class="navn"></h3>
+    <a href="index.html" aria-label="Tilbage til forsiden">
+      <img class="btm_logo_img" alt="Logo med A og V opstillet - udgør Adam Vecht Tattoo">
+    </a>
+    <div class="wrapper">
+
+      <p class="adresse"></p>
+      <p class="telefon"></p>
+      <p class="email"></p>
+    </div>
+  </footer>
+
+
+  <div class="fixed_some">
+    <div class="rowwrapper">
+      <a href="https://www.instagram.com/tattoosbyadamv" target="_blank" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
+
+      <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" target="_blank" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
+    </div>
+  </div>
 
   <!-- JAVA -->
 

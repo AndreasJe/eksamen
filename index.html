@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam Vecht</title>
+  <link rel="preconnect" href="https://adam.duedrengen.dk">
   <link rel="stylesheet" type="text/css" href="style.css">
   <style media="screen">
     .velkommen {
@@ -16,11 +17,11 @@
 
       .pynt1 {
         display: block;
-        top: -80vh;
+        top: -21vh;
         right: -150px;
         width: 600px;
         position: absolute;
-        z-index: 999999999999999;
+        z-index: 999;
       }
 
     }
@@ -32,11 +33,11 @@
 
       .pynt1 {
         display: block;
-        top: -65vh;
+        top: -35vh;
         right: -150px;
         width: 800px;
         position: absolute;
-        z-index: 999999999999999;
+        z-index: 999;
       }
 
     }
@@ -45,10 +46,6 @@
 
 </head>
 <header>
-  <div class="hmm">
-
-    <span></span>
-  </div>
 
   <nav id="burger">
     <div id="menuToggle">
@@ -84,6 +81,9 @@
       <a href="information.html" aria-label="Information">Information</a>
       <a href="kontakt.html" aria-label="Kontakt">Kontakt</a>
     </div>
+    <section class="header-down-arrow">
+      <img class="scroll-indikator" alt="Scroll indikator på forsiden" width="50">
+    </section>
     <div class="video-container">
       <video loop muted autoplay class="bg_video">
       </video>
@@ -112,27 +112,28 @@
     </div>
 
 
-    <footer>
-      <h3 class="navn center"></h3>
-      <img class="btm_logo_img" alt="Logo med A og V opstillet - udgør Adam Vecht Tattoo">
-
-      <div class="wrapper">
-
-        <p class="adresse"></p>
-        <p class="telefon"></p>
-        <p class="email"></p>
-      </div>
-    </footer>
-
-
-    <div class="fixed_some">
-      <div class="rowwrapper">
-        <a href="https://www.instagram.com/tattoosbyadamv" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
-
-        <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
-      </div>
-    </div>
   </main>
+  <footer>
+    <h3 class="navn center"></h3>
+    <a href="index.html" aria-label="Tilbage til forsiden">
+      <img class="btm_logo_img" alt="Logo med A og V opstillet - udgør Adam Vecht Tattoo">
+    </a>
+    <div class="wrapper">
+
+      <p class="adresse"></p>
+      <p class="telefon"></p>
+      <p class="email"></p>
+    </div>
+  </footer>
+
+
+  <div class="fixed_some">
+    <div class="rowwrapper">
+      <a href="https://www.instagram.com/tattoosbyadamv" target="_blank" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
+
+      <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" target="_blank" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
+    </div>
+  </div>
 
   <!-- JAVA -->
 
@@ -180,6 +181,7 @@
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
       document.querySelector(".pynt1").src = genereltIndhold.pyntforside1.guid;
+      document.querySelector(".scroll-indikator").src = genereltIndhold.scroll.guid;
     }
   </script>
 
