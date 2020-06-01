@@ -25,7 +25,7 @@
     z-index: 150;
   }
 
-  .header-down-arrow {
+  .scroll-container {
     visibility: hidden;
   }
 
@@ -1561,7 +1561,7 @@
     }
 
     /* // SCROLL INDIKATOR fra: https://cssanimation.rocks/scroll-cue/ */
-    .header-down-arrow {
+    .scroll-container {
       position: absolute;
       bottom: -35vh;
       left: 0;
@@ -1571,7 +1571,7 @@
       text-align: center;
     }
 
-    .header-down-arrow img {
+    .scroll-container img {
       animation: fade-slide-up 1s 1s ease-out forwards;
       opacity: 0;
       z-index: 9999999999999999999;

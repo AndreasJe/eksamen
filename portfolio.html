@@ -9,6 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://adam.duedrengen.dk">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <style media="screen">
     @media screen and (min-width: 1200px) {
       .splash_img {
@@ -62,7 +71,7 @@
 
   <nav id="burger">
     <div id="menuToggle">
-      <input name="menu" type="checkbox" />
+      <input name="Open burger" type="checkbox" />
 
       <span></span>
       <span></span>
@@ -175,34 +184,37 @@
 
   <div class="fixed_some">
     <div class="rowwrapper">
-      <a href="https://www.instagram.com/tattoosbyadamv" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
+      <a href="https://www.instagram.com/tattoosbyadamv" rel="noopener" aria-label="Instagram"><img class="instagram_ikon" alt="Instagram ikon"></a>
 
-      <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
+      <a href="https://da-dk.facebook.com/pg/AdamVechtTattoo/" rel="noopener" aria-label="Facebook"><img class="facebook_ikon" alt="Facebook ikon"></a>
     </div>
   </div>
   <!-- JAVA -->
 
   <script>
-    //find parametre (variabler) i url'en
-    let urlParams = new URLSearchParams(window.location.search);
-    //returner værdien for variablen "id"
-    let id = urlParams.get("id");
+    // Variabler defineres
     let billeder
     var modal = document.getElementById("myModal")
     const liste = document.querySelector("#liste");
     const template = document.querySelector("template");
     let filteret = "alle";
+
+    //Start script
     document.addEventListener("DOMContentLoaded", start);
 
+    //Start function
     function start() {
-      getJson();
-      addEventListenersToButtons();
+      getJson(); //JSON
+      addEventListenersToButtons(); //Knapper til filtrering
     }
 
+    //Start function
     async function getJson() {
-
+      //Url1 henter Tatoveringer og smider dem ind i feedet. De seneste 100 vises.
       const url1 = "https://adam.duedrengen.dk/wp-json/wp/v2/tattoo?per_page=100";
+      //Url2 henter generelt indhold til sitet.
       const url2 = "https://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
+      //Begge forbindes med ovenstående variable, og aktiveres med funktion til sidst.
       let response1 = await fetch(url1);
       let response2 = await fetch(url2);
       billeder = await response1.json();
@@ -212,7 +224,7 @@
 
     }
 
-
+    // Portfolio vises.
     function visPortfolio() {
 
       console.log(billeder)
@@ -221,45 +233,51 @@
         if (filteret == "alle" || filteret == billede.kategorier) {
           const clone = template.cloneNode(true).content;
 
-          clone.querySelector(".oplaeg_img").src = billede.billede.guid;
-          clone.querySelector(".oplaeg_img").alt = billede.kort_beskrivelse;
+          clone.querySelector(".oplaeg_img").src = billede.billede.guid; // oplaeg_img får tilegnet sin src attribute fra backend
+          clone.querySelector(".oplaeg_img").alt = billede.kort_beskrivelse; // oplaeg_img får tilegnet sin alt attribute fra backend
 
 
 
           clone.querySelector("article").addEventListener("click", () => {
-            visModal(billede)
-
-
+            visModal(billede) // ved click på article aktiveres Modal (Popup)
           })
           liste.appendChild(clone);;
         }
       });
     }
 
+    // Aktivering af filter knapper - Click henviser til filtrerings funktionen nedenfor.
     function addEventListenersToButtons() {
       document.querySelectorAll("button").forEach(elm => {
         elm.addEventListener("click", filtrering);
       })
     }
 
+    // Filterings funktionen sørger for at billeder filtreret efter det valgte data-set.
     function filtrering() {
+      //Filter ud fra field'et= "kategorier" i backend.
       filteret = this.dataset.kategorier;;
       console.log("Du har valgt filteret:" + this.textContent);
+      // En evt overskrift på valgt filter.
       //document.querySelector(".overskrift2").textContent = this.textContent;
+
       document.querySelectorAll(".filter").forEach(elm => {
-        elm.classList.remove("valgt");
+        elm.classList.remove("valgt"); // Knapper renses for allerede valgte klasser.
       });
-      this.classList.add("valgt");
+      this.classList.add("valgt"); // Filter knappen får tilføjet klassen "valgt".
+      //Til sidst vises loopviewet på ny, men den anvendte kategori
       visPortfolio();
     }
 
+    // Funktion viser Modal - vedhæfter billede scr og alt.
     function visModal(billede) {
-      document.querySelector(".modal").style.display = "block";
-      document.querySelector(".close").addEventListener("click", skjulModal);
-      document.querySelector("#modal_img").src = billede.billede.guid;
-      document.querySelector(".oplaeg_img").alt = billede.kort_beskrivelse;
+      document.querySelector(".modal").style.display = "block"; // Popup vises - "Display: Block" istedet for "None".
+      document.querySelector(".close").addEventListener("click", skjulModal); //Knappen til lukning aktiverer funktionen SkjulModal
+      document.querySelector("#modal_img").src = billede.billede.guid; //Modal billede får tilegnet sin src attribute fra backend
+      document.querySelector(".oplaeg_img").alt = billede.kort_beskrivelse; //Modal får tilegnet sin alt attribute fra backend
     }
 
+    // Funktion fjerner POPUP - Hvis der klikkes udenfor POPUP vinduet
     function skjulModal() {
       document.querySelector(".modal").style.display = "none";
       //window.scrollTo(0);
@@ -270,6 +288,7 @@
       }
     }
 
+    // Funktioner henter generelt indhold på siden.
     function visGenereltIndhold() {
       console.log("Henter generelt indhold...")
       document.querySelector(".adresse").textContent = genereltIndhold.adresse;
