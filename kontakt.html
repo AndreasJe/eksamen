@@ -44,9 +44,27 @@
       .splash_img {
         object-position: 0 40%;
       }
+
+      .pynt4 {
+        display: block;
+        top: -35vh;
+        right: -20px;
+        width: 400px;
+        position: absolute;
+        z-index: 999;
+      }
     }
 
     @media screen and (min-width: 2400px) {
+
+      .pynt4 {
+        display: block;
+        top: -200px;
+        right: 100px;
+        width: 500px;
+        position: absolute;
+        z-index: 999;
+      }
 
       .splash_img {
         object-position: 0 30%;
@@ -103,6 +121,16 @@
     </nav>
   </header>
 
+
+  <div class="pynt_container">
+
+    <img class="pynt1" alt="Stregtegning af tatovering">
+    <img class="pynt2" alt="Stregtegning af tatovering">
+    <img class="pynt3" alt="Stregtegning af tatovering">
+    <img class="pynt4" alt="Stregtegning af tatovering">
+    <img class="pynt5" alt="Stregtegning af tatovering">
+
+  </div>
 
   <main id="content">
     <h1 class="overskrift retract"></h1>
@@ -186,6 +214,7 @@
       document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
       document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
       document.querySelector(".splash_img").src = genereltIndhold.splash4.guid;
+      document.querySelector(".pynt4").src = genereltIndhold.pyntkontakt.guid;
     }
   </script>
 
