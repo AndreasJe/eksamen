@@ -24,7 +24,7 @@ function visForside() {
   document.querySelector(".bg_img").src = forside.baggrundsbillede.guid;
   document.querySelector(".bg_video").src = forside.video.guid;
   document.querySelector(".overskrift").textContent = forside.overskrift;
-  document.querySelector(".broedtekst").textContent = forside.tekst;
+  document.querySelector(".broedtekst").innerHTML = forside.tekst;
 
 }
 
