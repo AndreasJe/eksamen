@@ -524,10 +524,10 @@
 
   /* //TRÆKKER OVERSKRIFTEN OP TIL SPLASH PÅ UNDERSIDER */
   .retract {
-    width: 600px;
+    width: 250px;
     position: absolute;
     top: 21vh;
-    margin-left: -300px;
+    margin-left: -125px;
     left: 50%;
     z-index: 850;
     font-size: 4rem;
@@ -999,6 +999,10 @@
       top: 21vh;
       position: absolute;
       font-size: 5rem;
+      width: 600px;
+      margin-left: -300px;
+      left: 50%;
+      z-index: 850;
     }
 
     .panel {
@@ -1303,10 +1307,10 @@
     }
 
     .retract {
-      width: 300px;
+      width: 600px;
+      margin-left: -300px;
       position: absolute;
       top: 52vh;
-      margin-left: -150px;
       left: 50%;
       z-index: 999999999999999999999999999;
       font-size: 6rem;
