@@ -8,62 +8,66 @@
   <title>Kontakt | Adam Vecht Tattoo</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://adam.duedrengen.dk">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
-  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+
   <style media="screen">
     @media screen and (min-width: 1200px) {
       .splash_img {
         width: 100%;
         height: 60vh;
-        object-fit: cover;
-        display: block;
       }
 
       header {
         min-height: 60vh;
       }
 
+
       #navigation {
         position: absolute;
         top: 35vh;
         left: -3vw;
-        font-size: 3rem;
-      }
-
-      .retract {
-        margin-top: -30px;
       }
 
       .splash_img {
-        object-position: 0 40%;
+        object-position: 0 45%;
       }
 
       .pynt4 {
         display: block;
-        top: -35vh;
+        top: -5vh;
         right: -20px;
-        width: 400px;
+        width: 450px;
         position: absolute;
-        z-index: 999;
+        z-index: 999999;
+      }
+
+      #content {
+
+        padding-top: 3vh;
+      }
+
+      .retract {
+        top: 47vh;
       }
     }
 
-    @media screen and (min-width: 2400px) {
+    @media screen and (min-width: 3000px) {
 
       .pynt4 {
         display: block;
         top: -200px;
         right: 100px;
-        width: 500px;
+        width: 700px;
         position: absolute;
-        z-index: 999;
+        z-index: 999999;
       }
 
       .splash_img {
@@ -73,6 +77,12 @@
       #navigation {
         top: 35vh;
         left: 0vw;
+        font-size: 2.5rem;
+      }
+
+      #content {
+
+        padding-top: 1vh;
       }
     }
   </style>
@@ -122,6 +132,8 @@
   </header>
 
 
+  <h1 class="overskrift retract"></h1>
+
   <div class="pynt_container">
 
     <img class="pynt1" alt="Stregtegning af tatovering">
@@ -132,17 +144,38 @@
 
   </div>
 
+
   <main id="content">
-    <h1 class="overskrift retract"></h1>
-    <div class="smallBreaker">
+    <p class="kontakt_tekst"></p>
+
+
+
+    <div class="kontakt_form">
+      <form action="/action_page.php">
+        <label for="fnavn" class="begone">Fornavn</label>
+        <input type="text" id="fnavn" name="fornavn" placeholder="Dit fornavn..">
+
+        <label for="efternavn" class="begone">Efternavn</label>
+        <input type="text" id="efternavn" name="efternavn" placeholder="Dit efternavn..">
+
+        <label for="email" class="begone">Email</label>
+        <input type="text" id="email" name="email" placeholder="Din email..">
+
+        <label for="telefon" class="begone">Telefon</label>
+        <input type="text" id="telefon" name="telefon" placeholder="Dit telefonnummer..">
+        <div class="block">
+
+          <label for="besked">Skriv en besked her:</label>
+          <textarea id="besked" name="besked" placeholder="" style="height:200px"></textarea>
+        </div>
+      </form>
+      <input type="submit" value="Submit">
+
+
     </div>
 
 
-    <div class="kontakt_formular">
-      <div id="backend-data">
-        <!-- //bruger klasser defineret i plugin - kontakt_form, kontakt_send, kontakt_navn osv. -->
-      </div>
-    </div>
+
     <div class="smallBreaker">
     </div>
 
@@ -179,7 +212,7 @@
     let kontakt
     let genereltIndhold
 
-    let url1 = "https://adam.duedrengen.dk/wp-json/wp/v2/pages/768";
+    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/kontakt/1038";
     let url2 = "https://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
 
     async function start() {
@@ -196,8 +229,8 @@
 
     function visKontakt() {
       console.log("Henter kontakt formular...")
-      document.querySelector(".overskrift").textContent = kontakt.title.rendered;
-      document.querySelector("#backend-data").innerHTML = kontakt.content.rendered;
+      document.querySelector(".overskrift").textContent = kontakt.overskrift;
+      document.querySelector(".kontakt_tekst").innerHTML = kontakt.broedtekst;
 
     }
 

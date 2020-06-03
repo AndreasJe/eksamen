@@ -8,14 +8,14 @@
   <title>Bio | Adam Vecht Tattoo</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://adam.duedrengen.dk">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
-  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <style media="screen">
     @media screen and (min-width: 1200px) {
@@ -38,8 +38,8 @@
         font-size: 3rem;
       }
 
-      .retract {
-        margin-top: -150px;
+      .splash_img {
+        object-position: 0 35%;
       }
     }
 
@@ -50,6 +50,10 @@
       #navigation {
         top: 35vh;
         left: 0vw;
+      }
+
+      .splash_img {
+        object-position: 0 25%;
       }
     }
   </style>
@@ -96,9 +100,9 @@
     </nav>
   </header>
 
+  <h1 class="overskrift1 retract"></h1>
 
   <main id="content">
-    <h1 class="overskrift1 retract"></h1>
 
     <div class="bio">
       <img class="bio_img" alt="Portræt af Adam Vecht">
@@ -114,12 +118,9 @@
 
       <div class="insta_feed">
         <div class="grid">
-          <img class="venstre">
-
           <img class="insta1 insta" alt="Seneste billeder fra Instagram: tattoosbyadamv -1">
           <img class="insta2 insta" alt="Seneste billeder fra Instagram: tattoosbyadamv -2">
           <img class="insta3 insta" alt="Seneste billeder fra Instagram: tattoosbyadamv -3">
-          <img class="hoejre">
         </div>
       </div>
       <a href="https://www.instagram.com/tattoosbyadamv/" class="btn" target="_blank" aria-label="Knap til Instagram">
@@ -189,8 +190,6 @@
       document.querySelector(".insta2").src = biografi.billede2.guid;
       document.querySelector(".insta3").src = biografi.billede3.guid;
       document.querySelector(".bio_img").src = biografi.selvportraet.guid;
-      document.querySelector(".venstre").src = biografi.venstre.guid;
-      document.querySelector(".hoejre").src = biografi.hjre.guid;
     }
 
 
