@@ -454,10 +454,11 @@
   }
 
   #besked {
-    width: 100%;
+    width: 96%;
     background-color: #373737;
     margin-bottom: 0;
     padding: 0;
+    padding: 10px;
   }
 
   .kontakt_tekst {
@@ -478,6 +479,8 @@
     font-size: 1rem;
     font-weight: bolder;
     border: none;
+    font-size: 1rem;
+    line-height: 35px;
   }
 
   input[type=submit] {
@@ -509,6 +512,7 @@
     font-family: 'Lane - Narrow';
     color: #FFF;
     font-size: 1rem;
+    line-height: 35px;
   }
 
   /* //------------------------ GENERELLE TEKST KLASSER --------------------*/
@@ -565,9 +569,11 @@
   p {
     width: 80%;
     font-size: 1.5rem;
+    line-height: 28px;
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px;
+    letter-spacing: 1px;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lane - Narrow';
@@ -583,7 +589,7 @@
     margin-bottom: 2vh;
     margin-left: auto;
     text-align: center;
-    width: 250px;
+    width: 300px;
     font-family: 'Lane - Narrow';
     text-transform: uppercase;
   }
