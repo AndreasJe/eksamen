@@ -1253,11 +1253,11 @@
     #navigation {
       position: absolute;
       top: 70vh;
-      left: -3vw;
+      left: -40px;
       visibility: visible;
       text-align: center;
       z-index: 9;
-      width: 500px;
+      width: 350px;
     }
 
     /* ---------KONTAKT FORMULAR--------- */
@@ -1729,5 +1729,9 @@
     #besked {
       width: 96%;
       padding: 10px;
+    }
+
+    #navigation {
+      width: 250px;
     }
   }
