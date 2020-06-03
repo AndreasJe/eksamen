@@ -97,10 +97,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 90%;
+    height: 80vh;
     max-width: 100%;
     max-height: 80vh;
-    margin-top: 10vh;
+    margin-top: 30vh;
     border: 10px black solid;
     object-fit: cover;
     object-position: center;
@@ -177,7 +178,7 @@
 
   .logo_img {
     position: absolute;
-    width: 150px;
+    width: 120px;
     left: 2vh;
     top: 1vh;
     z-index: 9;
@@ -324,9 +325,8 @@
 
   footer {
     padding-top: 50px;
-    padding-bottom: 50px;
-    width: 200%;
-    margin-left: -49%;
+    padding-bottom: 80px;
+    width: 100%;
     background-color: #191818;
     text-align: center;
     height: auto;
@@ -382,12 +382,11 @@
     height: 100%;
     /* //BILLEDETS HØJDE I GRIDDET */
     width: 100%;
-    object-fit: cover;
-    /* // SØRGER FOR BILLEDET FYLDER SIN CONTAINER UD */
-    object-position: center;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    object-fit: cover;
+    object-position: center;
   }
 
   /* //VALGTE KATEGORI - HIGHLIGHT*/
@@ -455,10 +454,9 @@
 
   #besked {
     width: 96%;
+    padding: 10px;
     background-color: #373737;
     margin-bottom: 0;
-    padding: 0;
-    padding: 10px;
   }
 
   .kontakt_tekst {
@@ -579,6 +577,10 @@
     font-family: 'Lane - Narrow';
   }
 
+  footer p {
+    font-size: 1.1rem;
+  }
+
   .panel p {
     font-family: 'Lane - Narrow';
     padding: 15px 5px;
@@ -596,7 +598,7 @@
 
   .adresse {
     margin-top: 50px;
-    width: 220px;
+    width: 240px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -608,7 +610,7 @@
   }
 
   .email {
-    width: 350px;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -640,7 +642,8 @@
     text-align: center;
     text-decoration: underline;
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+    margin-top: 100px;
     cursor: pointer;
     color: #FFF;
     border: white 1px solid;
@@ -650,7 +653,7 @@
 
   .tiltop_btn:hover {
     border: white 3px solid;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   /* //FAQ klasser fra https://www.w3schools.com/howto/howto_js_accordion.asp*/
@@ -895,6 +898,11 @@
       z-index: 999999;
     }
 
+    footer {
+      width: 200%;
+      margin-left: -50%;
+    }
+
     footer .wrapper {
       height: auto;
       width: auto;
@@ -931,10 +939,10 @@
     }
 
     #besked {
-      width: 100%;
       background-color: #373737;
       margin-bottom: 0;
-      padding: 0;
+      width: 96%;
+      padding: 10px;
     }
 
     .kontakt_tekst {
@@ -960,13 +968,13 @@
     }
 
     .information {
-      width: 60%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
 
     .txt_container {
-      width: 60%;
+      width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1044,7 +1052,7 @@
 
     .adresse {
       margin-top: 50px;
-      width: 300px;
+      width: 270px;
     }
 
     .telefon {
@@ -1092,18 +1100,15 @@
     }
 
     .oplaeg_img {
-      height: 80%;
+      height: 100%;
       width: 100%;
-      border: 10px black solid;
+      object-fit: cover;
+      object-position: center;
     }
 
     .oplaeg_img:hover {
-      /* SKYGGE */
-      height: 32vh;
-      transition: 0.5s;
-      /* HØJDE - TABLET */
-      width: 100%;
-      /* BREDDE - TABLET */
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
     }
 
     .bio_img {
@@ -1152,7 +1157,7 @@
 
     .logo_img {
       position: absolute;
-      width: 250px;
+      width: 150px;
       left: 2vh;
       top: 1vh;
       z-index: 9;
@@ -1234,9 +1239,10 @@
       position: absolute;
       top: 70vh;
       left: -3vw;
-      width: 200px;
       visibility: visible;
       text-align: center;
+      z-index: 9;
+      width: 500px;
     }
 
     /* ---------KONTAKT FORMULAR--------- */
@@ -1251,6 +1257,7 @@
       display: block;
       margin: auto;
       margin-top: 10vh;
+      max-width: 850px;
     }
 
     form {
@@ -1271,7 +1278,7 @@
       max-width: 80vw;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 10px;
+      grid-gap: 50px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1282,15 +1289,16 @@
     }
 
     article {
-      height: 600px;
+      height: 500px;
+      overflow: hidden;
+      border: 10px black solid;
     }
 
     .oplaeg_img:hover {
-      /* SKYGGE */
-      height: 550px;
-      transition: 0.5s;
+      height: 110%;
+      transition: 0.3s;
       /* HØJDE - TABLET */
-      width: 100%;
+      width: 110%;
       /* BREDDE - TABLET */
     }
 
@@ -1411,11 +1419,6 @@
       z-index: 99;
     }
 
-    #navigation {
-      z-index: 9;
-      width: 350px;
-    }
-
     .accordion {
       height: 65px;
       margin-top: 1vh;
@@ -1449,10 +1452,10 @@
     }
 
     .filter {
-      width: 18vw;
+      width: 21vw;
       Height: 60px;
       color: #FFF;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -1465,14 +1468,13 @@
     }
 
     .filter:hover {
-      width: 25vw;
       font-size: 1.6rem;
       border: white 3px solid;
     }
 
     .logo_img {
       position: absolute;
-      width: 250px;
+      width: 220px;
       left: 2vh;
       top: 1vh;
       z-index: 9;
@@ -1536,6 +1538,11 @@
     .instagram {
       margin-top: 20vh;
     }
+
+    #besked {
+      width: 100%;
+      padding: 10px;
+    }
   }
 
   /* -----------------UHD styling-------------- */
@@ -1565,7 +1572,38 @@
     }
 
     .filter {
-      width: 500px;
+      width: 21vw;
+      Height: 60px;
+      color: #FFF;
+      font-size: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      text-decoration: underline;
+      padding: 10px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      border: white 1px solid;
+      font-family: 'BaseOneReg';
+    }
+
+    .filter:hover {
+      font-size: 1.6rem;
+      border: white 3px solid;
+    }
+
+    #liste {
+      max-width: 80vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .oplaeg_img {
+      height: 600px;
+      width: 100%;
     }
 
     .grid {
@@ -1591,11 +1629,10 @@
       display: block;
       margin-right: auto;
       margin-left: auto;
-      height: 600px;
     }
 
     article {
-      height: 700px;
+      height: 600px;
     }
 
     .oplaeg_img:hover {
@@ -1672,5 +1709,10 @@
       margin-left: 4%;
       margin-right: auto;
       z-index: -1;
+    }
+
+    #besked {
+      width: 96%;
+      padding: 10px;
     }
   }

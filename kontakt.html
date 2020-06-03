@@ -32,8 +32,7 @@
 
       #navigation {
         position: absolute;
-        top: 35vh;
-        left: -3vw;
+        top: 42vh;
       }
 
       .splash_img {
@@ -75,8 +74,8 @@
       }
 
       #navigation {
-        top: 35vh;
-        left: 0vw;
+        top: 42vh;
+        left: 3vw;
         font-size: 2.5rem;
       }
 
@@ -212,7 +211,7 @@
     let kontakt
     let genereltIndhold
 
-    let url1 = "http://adam.duedrengen.dk/wp-json/wp/v2/kontakt/1038";
+    let url1 = "https://adam.duedrengen.dk/wp-json/wp/v2/kontakt/1038";
     let url2 = "https://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
 
     async function start() {
@@ -222,8 +221,8 @@
       kontakt = await response1.json();
       genereltIndhold = await response2.json();
 
-      visKontakt();
       visGenereltIndhold();
+      visKontakt();
     }
 
 

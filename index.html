@@ -4,6 +4,8 @@
 <head>
   <meta name="description" content="Her finder du Adam Vechts Portfolio. Du finder min shop på Ørestads Boulevard 61, kontakt mig vedrørende udvikling af ideer og for at aftale en tid. Portfolio. Kontakt. Information. Aftercare. FAQ." />
   <meta charset="utf-8">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="index.js" as="script">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam Vecht Tattoo</title>
   <link rel="preconnect" href="https://adam.duedrengen.dk">
@@ -23,7 +25,7 @@
     }
 
     #content {
-      margin-top: 5vh;
+      margin-top: -10vh;
     }
 
     @media screen and (min-width: 1200px) {
@@ -44,9 +46,8 @@
       }
 
       #content {
-        margin-top: 25vh;
+        margin-top: 0;
       }
-
 
     }
 
@@ -64,9 +65,6 @@
         z-index: 999999;
       }
 
-      #navigation {
-        left: 0vw;
-      }
 
       .padding {
         padding: 4vw;
@@ -75,7 +73,7 @@
       }
 
       #content {
-        margin-top: 25vh;
+        margin-top: 0;
       }
 
     }
@@ -176,53 +174,8 @@
 
   <!-- JAVA -->
 
-  <script>
-    document.addEventListener("DOMContentLoaded", start)
 
-
-    let forside
-    let genereltIndhold
-
-    let url1 = "https://adam.duedrengen.dk/wp-json/wp/v2/forside/792";
-    let url2 = "https://adam.duedrengen.dk/wp-json/wp/v2/generelt/751";
-
-    async function start() {
-      let response1 = await fetch(url1);
-      let response2 = await fetch(url2);
-
-      forside = await response1.json();
-      genereltIndhold = await response2.json();
-
-      visForside();
-      visGenereltIndhold();
-    }
-
-
-    function visForside() {
-      console.log("Henter forside indhold...")
-      document.querySelector(".bg_img").src = forside.baggrundsbillede.guid;
-      document.querySelector(".bg_video").src = forside.video.guid;
-      document.querySelector(".overskrift").textContent = forside.overskrift;
-      document.querySelector(".broedtekst").textContent = forside.tekst;
-
-    }
-
-
-
-    function visGenereltIndhold() {
-      console.log("Henter generelt indhold...")
-      document.querySelector(".logo_img").src = genereltIndhold.logo_forside.guid;
-      document.querySelector(".btm_logo_img").src = genereltIndhold.logo.guid;
-      document.querySelector(".adresse").textContent = genereltIndhold.adresse;
-      document.querySelector(".email").textContent = genereltIndhold.email;
-      document.querySelector(".telefon").textContent = genereltIndhold.tlf;
-      document.querySelector(".navn").textContent = genereltIndhold.navn;
-      document.querySelector(".facebook_ikon").src = genereltIndhold.facebook.guid;
-      document.querySelector(".instagram_ikon").src = genereltIndhold.instagram.guid;
-      document.querySelector(".pynt1").src = genereltIndhold.pyntforside1.guid;
-      document.querySelector(".scroll-indikator").src = genereltIndhold.scroll.guid;
-    }
-  </script>
+  <script src="index.js" defer></script>
 
 
   <!-- HTML SLUT -->
